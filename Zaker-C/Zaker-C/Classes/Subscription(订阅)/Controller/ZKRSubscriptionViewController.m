@@ -24,34 +24,37 @@ CGFloat const margin = 1;
 #import "ZKRRootTypeItem.h"
 @interface ZKRSubscriptionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
 
+ /** 整个界面的一个scrollView */
 @property (nonatomic, weak) UIScrollView *scroll;
-
+ /** 滚动新闻的scrollView */
 @property (nonatomic, weak) UIScrollView *articleScroll;
-
+ /** 内容分类的collectionView */
 @property (nonatomic, weak) UICollectionView *collectionView;
-
-@property (nonatomic, strong) NSMutableArray *items;
-
+ /** 内容分类的数组 */
 @property (nonatomic, strong) NSMutableArray *typeArray;
+
 @end
 
-@implementation ZKRSubscriptionViewController
+#pragma mark - ---| static |---
 static NSString *ID = @"cell";
 static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.php?";
+
+@implementation ZKRSubscriptionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self setupNav];
     
+     // 初始化主界面的scrollView
     UIScrollView *mainScrollView = [[UIScrollView alloc] init];
     mainScrollView.backgroundColor = CGLCommonBgColor;
     mainScrollView.frame = self.view.bounds;
     [self.view addSubview:mainScrollView];
     _scroll = mainScrollView;
     _scroll.delegate = self;
-    
     _scroll.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
+    
     //初始化轮播
     [self setupRotateArticles];
     
@@ -68,8 +71,6 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     self.navigationItem.title = @"订阅";
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"life_my_account" highImage:@"life_my_account" target:self action:@selector(accountClick)];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"icon-search-o" highImage:@"icon-search-o" target:self action:@selector(searchClick)];
-    
-    self.navigationController.navigationBar.translucent = NO;
 }
 
  /** 初始化头条图片轮播 */
@@ -85,33 +86,32 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
  /** 初始化collectionView */
 - (void)setupCollectionView
 {
+    //创建流水布局
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.itemSize = CGSizeMake(cellWH, cellWH);
     flowLayout.minimumLineSpacing = margin;
     flowLayout.minimumInteritemSpacing = margin;
     
+    //创建collectionView
     UICollectionView *contentTypeView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 200, CGLScreenW, 500) collectionViewLayout:flowLayout];
 
     contentTypeView.backgroundColor = CGLCommonBgColor;
-    
     contentTypeView.scrollEnabled = NO;
-    
     contentTypeView.dataSource = self;
-    
     contentTypeView.delegate = self;
     
     // 注册cell
     [contentTypeView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKRCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:ID];
+    
     [self.scroll addSubview:contentTypeView];
-
     self.collectionView = contentTypeView;
     
+    //计算整个页面的内容高度
     NSInteger count = _typeArray.count;
     NSInteger rows = (count - 1) / cols + 1;
     CGFloat collectionH = rows * cellWH;
     self.collectionView.cgl_height = collectionH;
     self.scroll.contentSize = CGSizeMake(0, collectionH + self.collectionView.cgl_y);
-    
 }
 
 - (void)loadData
@@ -130,21 +130,22 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     item.need_userinfo = @"NO";
     
     [_typeArray addObject:item];
-    
-    
 }
 
 #pragma mark - ---| event |---
+ /** 监听左上角`我的`按钮点击 */
 - (void)accountClick
 {
-    CGLFunc
+    //根据storyBoard加载界面
     UIStoryboard *mineStoryBoard = [UIStoryboard storyboardWithName:NSStringFromClass([ZKRMineViewController class]) bundle:nil];
     
     ZKRMineViewController *mineVC = [mineStoryBoard instantiateInitialViewController];
     
+    //push到我的界面
     [self.navigationController pushViewController:mineVC animated:YES];
 }
 
+ /** 监听右上角搜索按钮点击 */
 - (void)searchClick
 {
     CGLFunc
