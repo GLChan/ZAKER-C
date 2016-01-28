@@ -12,7 +12,6 @@
 #import "ZKRHotViewController.h"
 #import "ZKRFunViewController.h"
 #import "ZKRCommunityViewController.h"
-#import "ZKRTabBar.h"
 
 @interface ZKRTabBarController ()
 
@@ -42,8 +41,6 @@
     [self setupAllChildViewController];
     
     [self setupAllTabBarButton];
-    
-//    [self setupTabBar];
 }
 
 - (void)setupAllChildViewController
@@ -74,12 +71,8 @@
     //订阅
     UINavigationController *nav = self.childViewControllers[0];
     nav.tabBarItem.title = @"订阅";
-    
-    
-    
     nav.tabBarItem.image = [UIImage imageWithOriginalRender:@"tabBar_dingYue"];
     nav.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"tabBar_dingYue_click"];
-    
     
     //热点
     UINavigationController *nav1 = self.childViewControllers[1];
@@ -99,11 +92,5 @@
     nav3.tabBarItem.image = [UIImage imageWithOriginalRender:@"tabBar_sheQu"];
     nav3.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"tabBar_sheQu_click"];
     
-}
-
-- (void)setupTabBar
-{
-    ZKRTabBar *tabBar = [[ZKRTabBar alloc] init];
-    [self setValue:tabBar forKey:@"tabBar"];
 }
 @end
