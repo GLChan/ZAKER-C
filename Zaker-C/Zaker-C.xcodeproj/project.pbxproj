@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B36F19E6F7997B24383C5E1F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 956F6DB921F22EE3E5927AC7 /* libPods.a */; };
-		EE7872DC1C5685D90052A05C /* ZKRTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7872DB1C5685D90052A05C /* ZKRTabBar.m */; };
 		EE7E8DC31C58F2DF004E71DA /* rootBlocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7E8DC21C58F2DF004E71DA /* rootBlocks.plist */; };
 		EE7E8DC61C58F60D004E71DA /* ZKRRootTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7E8DC51C58F60D004E71DA /* ZKRRootTypeItem.m */; };
 		EE88D39F1C552E47001300F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE88D39E1C552E47001300F8 /* Assets.xcassets */; };
@@ -41,8 +40,6 @@
 		5E0CBED9235CE036F79B1193 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		956F6DB921F22EE3E5927AC7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A66997927A6C5856ABED30 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		EE7872DA1C5685D90052A05C /* ZKRTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRTabBar.h; sourceTree = "<group>"; };
-		EE7872DB1C5685D90052A05C /* ZKRTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRTabBar.m; sourceTree = "<group>"; };
 		EE7E8DC21C58F2DF004E71DA /* rootBlocks.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = rootBlocks.plist; path = "Classes/Subscription(订阅)/View/rootBlocks.plist"; sourceTree = "<group>"; };
 		EE7E8DC41C58F60D004E71DA /* ZKRRootTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRRootTypeItem.h; sourceTree = "<group>"; };
 		EE7E8DC51C58F60D004E71DA /* ZKRRootTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRRootTypeItem.m; sourceTree = "<group>"; };
@@ -308,8 +305,6 @@
 		EE88D3B91C55316A001300F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EE7872DA1C5685D90052A05C /* ZKRTabBar.h */,
-				EE7872DB1C5685D90052A05C /* ZKRTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -568,7 +563,6 @@
 				EE7E8DC61C58F60D004E71DA /* ZKRRootTypeItem.m in Sources */,
 				EE88D3E61C566D77001300F8 /* ZKRNavigationController.m in Sources */,
 				EE9629D31C5788B400B992AD /* ZKRBarButtonItem.m in Sources */,
-				EE7872DC1C5685D90052A05C /* ZKRTabBar.m in Sources */,
 				EE88D3F21C566ED4001300F8 /* ZKRCommunityViewController.m in Sources */,
 				EE9629DF1C57BD7D00B992AD /* ZKRArticleScrollView.m in Sources */,
 				EE88D3DE1C566C95001300F8 /* UIBarButtonItem+CGLExtension.m in Sources */,
