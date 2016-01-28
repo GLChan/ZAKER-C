@@ -8,11 +8,7 @@
 
 #define CGLBUTTONWEITH  self.bounds.size.width//图片的宽度
 #define CGLBUTTONHEIGHT  self.bounds.size.height//图片的高度
-/**
- 1. 定时滚动
- 2. 将轮播和pageControl放在一个view里面(自定义一个view)
- 3. pageControl的样式
- */
+
 #import "ZKRArticleScrollView.h"
 #import "ZKRRotationItem.h"
 #import "ZKRScrollButton.h"
@@ -21,9 +17,8 @@
 
 @interface ZKRArticleScrollView()<UIScrollViewDelegate>
 
-
-
 @end
+
 
 @implementation ZKRArticleScrollView
 
@@ -40,7 +35,8 @@
     CGFloat y = 0;
     CGFloat w = CGLScreenW;
     CGFloat h = self.cgl_height;
-
+    
+    //用for循环给每个图片的位置赋值
     for (NSUInteger i = 0; i < count; i++) {
         ZKRRotationItem *item = items[i];
         ZKRScrollButton *button = [[ZKRScrollButton alloc] initWithFrame:CGRectMake(i * w, y, w, h)];
