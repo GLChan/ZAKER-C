@@ -2,8 +2,8 @@
 //  ZKRCommunityViewController.m
 //  Zaker-C
 //
-//  Created by GuangliChan on 16/1/25.
-//  Copyright © 2016年 GLChen. All rights reserved.
+//  Created by ShaoXinSen on 16/1/25.
+//  Copyright © 2016年 SKX. All rights reserved.
 //
 
 #import "ZKRCommunityViewController.h"
