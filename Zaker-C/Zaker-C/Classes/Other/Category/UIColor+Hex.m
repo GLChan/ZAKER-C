@@ -8,6 +8,7 @@
 
 @implementation UIColor (Hex)
 
+ /** 16位颜色字符串转UIColor */
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha
 {
     //删除字符串中的空格
