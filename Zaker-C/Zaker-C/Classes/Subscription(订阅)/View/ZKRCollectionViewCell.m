@@ -28,6 +28,7 @@
 {
     _item = item;
     
+     /** 给内容类型添加图片 */
     if (![item.pic hasPrefix:@"http"]) {
         [_button setImage:[UIImage imageNamed:item.pic] forState:UIControlStateNormal];
     }
