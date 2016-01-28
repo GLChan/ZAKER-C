@@ -20,13 +20,7 @@
     //获取所有navigationBar
     UINavigationBar *navigationBar = [UINavigationBar appearanceWhenContainedIn:self, nil];
     
-//    [navigationBar setBackgroundColor:ZKRRedColor];
-//    NSMutableDictionary *attr = [NSMutableDictionary dictionary];
-//    attr[NSFontAttributeName] = [UIFont systemFontOfSize:20];
-//    [navigationBar setTitleTextAttributes:attr];
-    
-//    [navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-    
+    navigationBar.translucent = NO;
     
 }
 
