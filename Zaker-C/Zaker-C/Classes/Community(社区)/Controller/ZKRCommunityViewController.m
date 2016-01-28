@@ -8,6 +8,7 @@
 
 #import "ZKRCommunityViewController.h"
 
+#import "UIBarButtonItem+CGLExtension.h"
 @interface ZKRCommunityViewController ()
 
 @end
