@@ -12,6 +12,7 @@ CGFloat const margin = 1;
 #import "ZKRSubscriptionViewController.h"
 #import "ZKRArticleScrollView.h"
 #import "ZKRCollectionViewCell.h"
+#import "UIBarButtonItem+CGLExtension.h"
 
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
