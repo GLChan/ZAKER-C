@@ -19,7 +19,7 @@ CGFloat const margin = 1;
 #import <UIImageView+WebCache.h>
 #import <UIButton+WebCache.h>
 
-#import "ZKRMineViewController.h"
+#import "ZKRMineTableController.h"
 #import "ZKRScrollPageView.h"
 #import "ZKRRootTypeItem.h"
 @interface ZKRSubscriptionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
@@ -137,12 +137,22 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
 - (void)accountClick
 {
     //根据storyBoard加载界面
-    UIStoryboard *mineStoryBoard = [UIStoryboard storyboardWithName:NSStringFromClass([ZKRMineViewController class]) bundle:nil];
+    UIStoryboard *mineStoryBoard = [UIStoryboard storyboardWithName:NSStringFromClass([ZKRMineTableController class]) bundle:nil];
     
-    ZKRMineViewController *mineVC = [mineStoryBoard instantiateInitialViewController];
+//    ZKRMineViewController *mineVC = [mineStoryBoard instantiateInitialViewController];
+    
+    
+//    ZKRMineViewController *mineVC = [[ZKRMineViewController alloc] init];
+    
+//    CGLFunc
+    
+//    ZKRMineViewController *mineVC = [[ZKRMineViewController alloc] init];
+    
+    ZKRMineTableController *mineVC = [mineStoryBoard instantiateInitialViewController];
     
     //push到我的界面
     [self.navigationController pushViewController:mineVC animated:YES];
+    
 }
 
  /** 监听右上角搜索按钮点击 */

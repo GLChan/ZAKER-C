@@ -8,7 +8,7 @@
 
 #import "ZKRFunViewController.h"
 #import "ZKRBarButtonItem.h"
-#import "ZKRMineViewController.h"
+
 #import "UIBarButtonItem+CGLExtension.h"
 @interface ZKRFunViewController ()
 
