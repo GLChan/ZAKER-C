@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B36F19E6F7997B24383C5E1F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 956F6DB921F22EE3E5927AC7 /* libPods.a */; };
+		EE6646B41C5B96200064CDA6 /* ZKRMineTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6646B21C5B96200064CDA6 /* ZKRMineTableController.m */; };
+		EE6646B71C5B964F0064CDA6 /* ZKRMineTableController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6646B61C5B964F0064CDA6 /* ZKRMineTableController.storyboard */; };
 		EE7E8DC31C58F2DF004E71DA /* rootBlocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7E8DC21C58F2DF004E71DA /* rootBlocks.plist */; };
 		EE7E8DC61C58F60D004E71DA /* ZKRRootTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7E8DC51C58F60D004E71DA /* ZKRRootTypeItem.m */; };
 		EE88D39F1C552E47001300F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE88D39E1C552E47001300F8 /* Assets.xcassets */; };
@@ -32,14 +34,16 @@
 		EE9629E21C57D33A00B992AD /* ZKRScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9629E11C57D33A00B992AD /* ZKRScrollPageView.m */; };
 		EECC5E471C59181800540FB3 /* ZKRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EECC5E451C59181800540FB3 /* ZKRCollectionViewCell.m */; };
 		EECC5E481C59181800540FB3 /* ZKRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECC5E461C59181800540FB3 /* ZKRCollectionViewCell.xib */; };
-		EECC5E661C59B3A100540FB3 /* ZKRMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EECC5E641C59B3A100540FB3 /* ZKRMineViewController.m */; };
-		EECC5E691C59B3BA00540FB3 /* ZKRMineViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECC5E681C59B3BA00540FB3 /* ZKRMineViewController.storyboard */; };
+		EEDF82E91C5C631100FF5AA8 /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDF82E81C5C631100FF5AA8 /* HFStretchableTableHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E0CBED9235CE036F79B1193 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		956F6DB921F22EE3E5927AC7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A66997927A6C5856ABED30 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EE6646B11C5B96200064CDA6 /* ZKRMineTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRMineTableController.h; sourceTree = "<group>"; };
+		EE6646B21C5B96200064CDA6 /* ZKRMineTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRMineTableController.m; sourceTree = "<group>"; };
+		EE6646B61C5B964F0064CDA6 /* ZKRMineTableController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZKRMineTableController.storyboard; sourceTree = "<group>"; };
 		EE7E8DC21C58F2DF004E71DA /* rootBlocks.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = rootBlocks.plist; path = "Classes/Subscription(订阅)/View/rootBlocks.plist"; sourceTree = "<group>"; };
 		EE7E8DC41C58F60D004E71DA /* ZKRRootTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRRootTypeItem.h; sourceTree = "<group>"; };
 		EE7E8DC51C58F60D004E71DA /* ZKRRootTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRRootTypeItem.m; sourceTree = "<group>"; };
@@ -86,9 +90,8 @@
 		EECC5E441C59181800540FB3 /* ZKRCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRCollectionViewCell.h; sourceTree = "<group>"; };
 		EECC5E451C59181800540FB3 /* ZKRCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRCollectionViewCell.m; sourceTree = "<group>"; };
 		EECC5E461C59181800540FB3 /* ZKRCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKRCollectionViewCell.xib; sourceTree = "<group>"; };
-		EECC5E631C59B3A100540FB3 /* ZKRMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRMineViewController.h; sourceTree = "<group>"; };
-		EECC5E641C59B3A100540FB3 /* ZKRMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRMineViewController.m; sourceTree = "<group>"; };
-		EECC5E681C59B3BA00540FB3 /* ZKRMineViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZKRMineViewController.storyboard; sourceTree = "<group>"; };
+		EEDF82E71C5C631100FF5AA8 /* HFStretchableTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFStretchableTableHeaderView.h; sourceTree = "<group>"; };
+		EEDF82E81C5C631100FF5AA8 /* HFStretchableTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFStretchableTableHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +373,8 @@
 		EE88D3C21C55316A001300F8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EEDF82E71C5C631100FF5AA8 /* HFStretchableTableHeaderView.h */,
+				EEDF82E81C5C631100FF5AA8 /* HFStretchableTableHeaderView.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -404,9 +409,9 @@
 		EECC5E4A1C59B38500540FB3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EECC5E631C59B3A100540FB3 /* ZKRMineViewController.h */,
-				EECC5E641C59B3A100540FB3 /* ZKRMineViewController.m */,
-				EECC5E681C59B3BA00540FB3 /* ZKRMineViewController.storyboard */,
+				EE6646B11C5B96200064CDA6 /* ZKRMineTableController.h */,
+				EE6646B21C5B96200064CDA6 /* ZKRMineTableController.m */,
+				EE6646B61C5B964F0064CDA6 /* ZKRMineTableController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -487,8 +492,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EECC5E691C59B3BA00540FB3 /* ZKRMineViewController.storyboard in Resources */,
 				EECC5E481C59181800540FB3 /* ZKRCollectionViewCell.xib in Resources */,
+				EE6646B71C5B964F0064CDA6 /* ZKRMineTableController.storyboard in Resources */,
 				EE88D3A21C552E47001300F8 /* LaunchScreen.storyboard in Resources */,
 				EE7E8DC31C58F2DF004E71DA /* rootBlocks.plist in Resources */,
 				EE88D39F1C552E47001300F8 /* Assets.xcassets in Resources */,
@@ -554,7 +559,6 @@
 				EE88D3EC1C566EBE001300F8 /* ZKRHotViewController.m in Sources */,
 				EECC5E471C59181800540FB3 /* ZKRCollectionViewCell.m in Sources */,
 				EE9629D61C57907E00B992AD /* ZKRRotationItem.m in Sources */,
-				EECC5E661C59B3A100540FB3 /* ZKRMineViewController.m in Sources */,
 				EE88D3E21C566C95001300F8 /* UIView+Frame.m in Sources */,
 				EE88D3C41C55316A001300F8 /* main.m in Sources */,
 				EE9629DC1C57B23F00B992AD /* ZKRScrollButton.m in Sources */,
@@ -570,7 +574,9 @@
 				EE88D3E91C566EB5001300F8 /* ZKRSubscriptionViewController.m in Sources */,
 				EE9629E21C57D33A00B992AD /* ZKRScrollPageView.m in Sources */,
 				EE88D3C31C55316A001300F8 /* AppDelegate.m in Sources */,
+				EEDF82E91C5C631100FF5AA8 /* HFStretchableTableHeaderView.m in Sources */,
 				EE88D3E11C566C95001300F8 /* UITextField+CGLplaceholderLabel.m in Sources */,
+				EE6646B41C5B96200064CDA6 /* ZKRMineTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

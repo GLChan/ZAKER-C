@@ -71,26 +71,26 @@
     //订阅
     UINavigationController *nav = self.childViewControllers[0];
     nav.tabBarItem.title = @"订阅";
-    nav.tabBarItem.image = [UIImage imageWithOriginalRender:@"tabBar_dingYue"];
-    nav.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"tabBar_dingYue_click"];
+    nav.tabBarItem.image = [UIImage imageWithOriginalRender:@"subscribe"];
+    nav.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"subscribeHighLighted"];
     
     //热点
     UINavigationController *nav1 = self.childViewControllers[1];
     nav1.tabBarItem.title = @"热点";
-    nav1.tabBarItem.image = [UIImage imageWithOriginalRender:@"tabBar_hot"];
-    nav1.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"tabBar_hot_click"];
+    nav1.tabBarItem.image = [UIImage imageWithOriginalRender:@"issue"];
+    nav1.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"issueHighLighted"];
     
     //玩乐
     UINavigationController *nav2 = self.childViewControllers[2];
     nav2.tabBarItem.title = @"玩乐";
-    nav2.tabBarItem.image = [UIImage imageWithOriginalRender:@"tabBar_fun"];
-    nav2.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"tabBar_fun_click"];
+    nav2.tabBarItem.image = [UIImage imageWithOriginalRender:@"haveFun"];
+    nav2.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"haveFunHighLighted"];
     
     //社区
     UINavigationController *nav3 = self.childViewControllers[3];
     nav3.tabBarItem.title = @"社区";
-    nav3.tabBarItem.image = [UIImage imageWithOriginalRender:@"tabBar_sheQu"];
-    nav3.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"tabBar_sheQu_click"];
+    nav3.tabBarItem.image = [UIImage imageWithOriginalRender:@"topic"];
+    nav3.tabBarItem.selectedImage = [UIImage imageWithOriginalRender:@"topicHighLighted"];
     
 }
 @end
