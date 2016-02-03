@@ -10,9 +10,9 @@ CGFloat const margin = 1;
 #define cellWH (CGLScreenW - (cols - 1) * margin)/cols
 
 #import "ZKRSubscriptionViewController.h"
-#import "ZKRArticleScrollView.h"
 #import "ZKRCollectionViewCell.h"
 #import "UIBarButtonItem+CGLExtension.h"
+#import "CycleView.h"
 
 #import <AFNetworking/AFNetworking.h>
 #import <MJExtension/MJExtension.h>
@@ -20,7 +20,6 @@ CGFloat const margin = 1;
 #import <UIButton+WebCache.h>
 
 #import "ZKRMineTableController.h"
-#import "ZKRScrollPageView.h"
 #import "ZKRRootTypeItem.h"
 @interface ZKRSubscriptionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
 
@@ -76,11 +75,15 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
  /** 初始化头条图片轮播 */
 - (void)setupRotateArticles
 {
+//    ZKRScrollPageView *pageView = [[ZKRScrollPageView alloc] init];
+//    pageView.frame = CGRectMake(0, 0, CGLScreenW, 150);
+//    
+//    [self.scroll addSubview:pageView];
+    CycleView *cycleView = [[CycleView alloc] initWithFrame:CGRectMake(0, 0, CGLScreenW, 200)];
     
-    ZKRScrollPageView *pageView = [[ZKRScrollPageView alloc] init];
-    pageView.frame = CGRectMake(0, 0, CGLScreenW, 150);
     
-    [self.scroll addSubview:pageView];
+    
+    [self.scroll addSubview:cycleView];
 }
 
  /** 初始化collectionView */
@@ -138,15 +141,6 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
 {
     //根据storyBoard加载界面
     UIStoryboard *mineStoryBoard = [UIStoryboard storyboardWithName:NSStringFromClass([ZKRMineTableController class]) bundle:nil];
-    
-//    ZKRMineViewController *mineVC = [mineStoryBoard instantiateInitialViewController];
-    
-    
-//    ZKRMineViewController *mineVC = [[ZKRMineViewController alloc] init];
-    
-//    CGLFunc
-    
-//    ZKRMineViewController *mineVC = [[ZKRMineViewController alloc] init];
     
     ZKRMineTableController *mineVC = [mineStoryBoard instantiateInitialViewController];
     

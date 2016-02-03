@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B36F19E6F7997B24383C5E1F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 956F6DB921F22EE3E5927AC7 /* libPods.a */; };
+		EE5E7A0A1C619FE800F30275 /* CycleButon.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5E79FF1C619FE800F30275 /* CycleButon.m */; };
+		EE5E7A0B1C619FE800F30275 /* CyclePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5E7A011C619FE800F30275 /* CyclePageControl.m */; };
+		EE5E7A0C1C619FE800F30275 /* CycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5E7A031C619FE800F30275 /* CycleView.m */; };
+		EE5E7A0D1C619FE800F30275 /* HeadLineCurrentPageIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5E7A051C619FE800F30275 /* HeadLineCurrentPageIndicator.png */; };
+		EE5E7A0E1C619FE800F30275 /* HeadLineCurrentPageIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5E7A061C619FE800F30275 /* HeadLineCurrentPageIndicator@2x.png */; };
+		EE5E7A0F1C619FE800F30275 /* HeadLinePageIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5E7A071C619FE800F30275 /* HeadLinePageIndicator.png */; };
+		EE5E7A101C619FE800F30275 /* HeadLinePageIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5E7A081C619FE800F30275 /* HeadLinePageIndicator@2x.png */; };
+		EE5E7A111C619FE800F30275 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5E7A091C619FE800F30275 /* placeholder.png */; };
 		EE6646B41C5B96200064CDA6 /* ZKRMineTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6646B21C5B96200064CDA6 /* ZKRMineTableController.m */; };
 		EE6646B71C5B964F0064CDA6 /* ZKRMineTableController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6646B61C5B964F0064CDA6 /* ZKRMineTableController.storyboard */; };
 		EE7E8DC31C58F2DF004E71DA /* rootBlocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7E8DC21C58F2DF004E71DA /* rootBlocks.plist */; };
@@ -29,9 +37,6 @@
 		EE88D3F21C566ED4001300F8 /* ZKRCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE88D3F11C566ED4001300F8 /* ZKRCommunityViewController.m */; };
 		EE9629D31C5788B400B992AD /* ZKRBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9629D21C5788B400B992AD /* ZKRBarButtonItem.m */; };
 		EE9629D61C57907E00B992AD /* ZKRRotationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9629D51C57907E00B992AD /* ZKRRotationItem.m */; };
-		EE9629DC1C57B23F00B992AD /* ZKRScrollButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9629DB1C57B23F00B992AD /* ZKRScrollButton.m */; };
-		EE9629DF1C57BD7D00B992AD /* ZKRArticleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9629DE1C57BD7D00B992AD /* ZKRArticleScrollView.m */; };
-		EE9629E21C57D33A00B992AD /* ZKRScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9629E11C57D33A00B992AD /* ZKRScrollPageView.m */; };
 		EECC5E471C59181800540FB3 /* ZKRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EECC5E451C59181800540FB3 /* ZKRCollectionViewCell.m */; };
 		EECC5E481C59181800540FB3 /* ZKRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECC5E461C59181800540FB3 /* ZKRCollectionViewCell.xib */; };
 		EEDF82E91C5C631100FF5AA8 /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDF82E81C5C631100FF5AA8 /* HFStretchableTableHeaderView.m */; };
@@ -41,6 +46,17 @@
 		5E0CBED9235CE036F79B1193 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		956F6DB921F22EE3E5927AC7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A66997927A6C5856ABED30 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EE5E79FE1C619FE800F30275 /* CycleButon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleButon.h; sourceTree = "<group>"; };
+		EE5E79FF1C619FE800F30275 /* CycleButon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleButon.m; sourceTree = "<group>"; };
+		EE5E7A001C619FE800F30275 /* CyclePageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CyclePageControl.h; sourceTree = "<group>"; };
+		EE5E7A011C619FE800F30275 /* CyclePageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CyclePageControl.m; sourceTree = "<group>"; };
+		EE5E7A021C619FE800F30275 /* CycleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleView.h; sourceTree = "<group>"; };
+		EE5E7A031C619FE800F30275 /* CycleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleView.m; sourceTree = "<group>"; };
+		EE5E7A051C619FE800F30275 /* HeadLineCurrentPageIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeadLineCurrentPageIndicator.png; sourceTree = "<group>"; };
+		EE5E7A061C619FE800F30275 /* HeadLineCurrentPageIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeadLineCurrentPageIndicator@2x.png"; sourceTree = "<group>"; };
+		EE5E7A071C619FE800F30275 /* HeadLinePageIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeadLinePageIndicator.png; sourceTree = "<group>"; };
+		EE5E7A081C619FE800F30275 /* HeadLinePageIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HeadLinePageIndicator@2x.png"; sourceTree = "<group>"; };
+		EE5E7A091C619FE800F30275 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		EE6646B11C5B96200064CDA6 /* ZKRMineTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRMineTableController.h; sourceTree = "<group>"; };
 		EE6646B21C5B96200064CDA6 /* ZKRMineTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRMineTableController.m; sourceTree = "<group>"; };
 		EE6646B61C5B964F0064CDA6 /* ZKRMineTableController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZKRMineTableController.storyboard; sourceTree = "<group>"; };
@@ -81,12 +97,6 @@
 		EE9629D21C5788B400B992AD /* ZKRBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRBarButtonItem.m; sourceTree = "<group>"; };
 		EE9629D41C57907E00B992AD /* ZKRRotationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRRotationItem.h; sourceTree = "<group>"; };
 		EE9629D51C57907E00B992AD /* ZKRRotationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRRotationItem.m; sourceTree = "<group>"; };
-		EE9629DA1C57B23F00B992AD /* ZKRScrollButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRScrollButton.h; sourceTree = "<group>"; };
-		EE9629DB1C57B23F00B992AD /* ZKRScrollButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRScrollButton.m; sourceTree = "<group>"; };
-		EE9629DD1C57BD7D00B992AD /* ZKRArticleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRArticleScrollView.h; sourceTree = "<group>"; };
-		EE9629DE1C57BD7D00B992AD /* ZKRArticleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRArticleScrollView.m; sourceTree = "<group>"; };
-		EE9629E01C57D33A00B992AD /* ZKRScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRScrollPageView.h; sourceTree = "<group>"; };
-		EE9629E11C57D33A00B992AD /* ZKRScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRScrollPageView.m; sourceTree = "<group>"; };
 		EECC5E441C59181800540FB3 /* ZKRCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRCollectionViewCell.h; sourceTree = "<group>"; };
 		EECC5E451C59181800540FB3 /* ZKRCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRCollectionViewCell.m; sourceTree = "<group>"; };
 		EECC5E461C59181800540FB3 /* ZKRCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKRCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -121,6 +131,32 @@
 				5E0CBED9235CE036F79B1193 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE5E79FD1C619FE800F30275 /* CGLCyclePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				EE5E79FE1C619FE800F30275 /* CycleButon.h */,
+				EE5E79FF1C619FE800F30275 /* CycleButon.m */,
+				EE5E7A001C619FE800F30275 /* CyclePageControl.h */,
+				EE5E7A011C619FE800F30275 /* CyclePageControl.m */,
+				EE5E7A021C619FE800F30275 /* CycleView.h */,
+				EE5E7A031C619FE800F30275 /* CycleView.m */,
+				EE5E7A041C619FE800F30275 /* image */,
+			);
+			path = CGLCyclePlayer;
+			sourceTree = "<group>";
+		};
+		EE5E7A041C619FE800F30275 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				EE5E7A051C619FE800F30275 /* HeadLineCurrentPageIndicator.png */,
+				EE5E7A061C619FE800F30275 /* HeadLineCurrentPageIndicator@2x.png */,
+				EE5E7A071C619FE800F30275 /* HeadLinePageIndicator.png */,
+				EE5E7A081C619FE800F30275 /* HeadLinePageIndicator@2x.png */,
+				EE5E7A091C619FE800F30275 /* placeholder.png */,
+			);
+			path = image;
 			sourceTree = "<group>";
 		};
 		EE88D3861C552E47001300F8 = {
@@ -357,12 +393,6 @@
 		EE88D3C11C55316A001300F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EE9629DA1C57B23F00B992AD /* ZKRScrollButton.h */,
-				EE9629DB1C57B23F00B992AD /* ZKRScrollButton.m */,
-				EE9629DD1C57BD7D00B992AD /* ZKRArticleScrollView.h */,
-				EE9629DE1C57BD7D00B992AD /* ZKRArticleScrollView.m */,
-				EE9629E01C57D33A00B992AD /* ZKRScrollPageView.h */,
-				EE9629E11C57D33A00B992AD /* ZKRScrollPageView.m */,
 				EECC5E441C59181800540FB3 /* ZKRCollectionViewCell.h */,
 				EECC5E451C59181800540FB3 /* ZKRCollectionViewCell.m */,
 				EECC5E461C59181800540FB3 /* ZKRCollectionViewCell.xib */,
@@ -373,6 +403,7 @@
 		EE88D3C21C55316A001300F8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EE5E79FD1C619FE800F30275 /* CGLCyclePlayer */,
 				EEDF82E71C5C631100FF5AA8 /* HFStretchableTableHeaderView.h */,
 				EEDF82E81C5C631100FF5AA8 /* HFStretchableTableHeaderView.m */,
 			);
@@ -492,10 +523,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5E7A0F1C619FE800F30275 /* HeadLinePageIndicator.png in Resources */,
+				EE5E7A0D1C619FE800F30275 /* HeadLineCurrentPageIndicator.png in Resources */,
 				EECC5E481C59181800540FB3 /* ZKRCollectionViewCell.xib in Resources */,
+				EE5E7A111C619FE800F30275 /* placeholder.png in Resources */,
+				EE5E7A0E1C619FE800F30275 /* HeadLineCurrentPageIndicator@2x.png in Resources */,
 				EE6646B71C5B964F0064CDA6 /* ZKRMineTableController.storyboard in Resources */,
 				EE88D3A21C552E47001300F8 /* LaunchScreen.storyboard in Resources */,
 				EE7E8DC31C58F2DF004E71DA /* rootBlocks.plist in Resources */,
+				EE5E7A101C619FE800F30275 /* HeadLinePageIndicator@2x.png in Resources */,
 				EE88D39F1C552E47001300F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,18 +597,18 @@
 				EE9629D61C57907E00B992AD /* ZKRRotationItem.m in Sources */,
 				EE88D3E21C566C95001300F8 /* UIView+Frame.m in Sources */,
 				EE88D3C41C55316A001300F8 /* main.m in Sources */,
-				EE9629DC1C57B23F00B992AD /* ZKRScrollButton.m in Sources */,
 				EE88D3E01C566C95001300F8 /* UIImage+Render.m in Sources */,
+				EE5E7A0C1C619FE800F30275 /* CycleView.m in Sources */,
 				EE88D3DF1C566C95001300F8 /* UIColor+Hex.m in Sources */,
 				EE7E8DC61C58F60D004E71DA /* ZKRRootTypeItem.m in Sources */,
 				EE88D3E61C566D77001300F8 /* ZKRNavigationController.m in Sources */,
+				EE5E7A0B1C619FE800F30275 /* CyclePageControl.m in Sources */,
 				EE9629D31C5788B400B992AD /* ZKRBarButtonItem.m in Sources */,
 				EE88D3F21C566ED4001300F8 /* ZKRCommunityViewController.m in Sources */,
-				EE9629DF1C57BD7D00B992AD /* ZKRArticleScrollView.m in Sources */,
+				EE5E7A0A1C619FE800F30275 /* CycleButon.m in Sources */,
 				EE88D3DE1C566C95001300F8 /* UIBarButtonItem+CGLExtension.m in Sources */,
 				EE88D3C71C553414001300F8 /* ZKRTabBarController.m in Sources */,
 				EE88D3E91C566EB5001300F8 /* ZKRSubscriptionViewController.m in Sources */,
-				EE9629E21C57D33A00B992AD /* ZKRScrollPageView.m in Sources */,
 				EE88D3C31C55316A001300F8 /* AppDelegate.m in Sources */,
 				EEDF82E91C5C631100FF5AA8 /* HFStretchableTableHeaderView.m in Sources */,
 				EE88D3E11C566C95001300F8 /* UITextField+CGLplaceholderLabel.m in Sources */,
