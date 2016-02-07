@@ -18,7 +18,6 @@
 		EE5E7A111C619FE800F30275 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5E7A091C619FE800F30275 /* placeholder.png */; };
 		EE6646B41C5B96200064CDA6 /* ZKRMineTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6646B21C5B96200064CDA6 /* ZKRMineTableController.m */; };
 		EE6646B71C5B964F0064CDA6 /* ZKRMineTableController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6646B61C5B964F0064CDA6 /* ZKRMineTableController.storyboard */; };
-		EE7E8DC31C58F2DF004E71DA /* rootBlocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7E8DC21C58F2DF004E71DA /* rootBlocks.plist */; };
 		EE7E8DC61C58F60D004E71DA /* ZKRRootTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7E8DC51C58F60D004E71DA /* ZKRRootTypeItem.m */; };
 		EE88D39F1C552E47001300F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE88D39E1C552E47001300F8 /* Assets.xcassets */; };
 		EE88D3A21C552E47001300F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE88D3A01C552E47001300F8 /* LaunchScreen.storyboard */; };
@@ -37,6 +36,8 @@
 		EE88D3F21C566ED4001300F8 /* ZKRCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE88D3F11C566ED4001300F8 /* ZKRCommunityViewController.m */; };
 		EE9629D31C5788B400B992AD /* ZKRBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9629D21C5788B400B992AD /* ZKRBarButtonItem.m */; };
 		EE9629D61C57907E00B992AD /* ZKRRotationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9629D51C57907E00B992AD /* ZKRRotationItem.m */; };
+		EE97C8D61C66529500331134 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = EE97C8D51C66529500331134 /* UIImage+Tint.m */; };
+		EE97C8D81C6652C600331134 /* rootBlocks.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE97C8D71C6652C600331134 /* rootBlocks.plist */; };
 		EECC5E471C59181800540FB3 /* ZKRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EECC5E451C59181800540FB3 /* ZKRCollectionViewCell.m */; };
 		EECC5E481C59181800540FB3 /* ZKRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECC5E461C59181800540FB3 /* ZKRCollectionViewCell.xib */; };
 		EEDF82E91C5C631100FF5AA8 /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDF82E81C5C631100FF5AA8 /* HFStretchableTableHeaderView.m */; };
@@ -60,7 +61,6 @@
 		EE6646B11C5B96200064CDA6 /* ZKRMineTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRMineTableController.h; sourceTree = "<group>"; };
 		EE6646B21C5B96200064CDA6 /* ZKRMineTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRMineTableController.m; sourceTree = "<group>"; };
 		EE6646B61C5B964F0064CDA6 /* ZKRMineTableController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZKRMineTableController.storyboard; sourceTree = "<group>"; };
-		EE7E8DC21C58F2DF004E71DA /* rootBlocks.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = rootBlocks.plist; path = "Classes/Subscription(订阅)/View/rootBlocks.plist"; sourceTree = "<group>"; };
 		EE7E8DC41C58F60D004E71DA /* ZKRRootTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRRootTypeItem.h; sourceTree = "<group>"; };
 		EE7E8DC51C58F60D004E71DA /* ZKRRootTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRRootTypeItem.m; sourceTree = "<group>"; };
 		EE88D38F1C552E47001300F8 /* Zaker-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zaker-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +97,9 @@
 		EE9629D21C5788B400B992AD /* ZKRBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRBarButtonItem.m; sourceTree = "<group>"; };
 		EE9629D41C57907E00B992AD /* ZKRRotationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRRotationItem.h; sourceTree = "<group>"; };
 		EE9629D51C57907E00B992AD /* ZKRRotationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRRotationItem.m; sourceTree = "<group>"; };
+		EE97C8D41C66529500331134 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		EE97C8D51C66529500331134 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		EE97C8D71C6652C600331134 /* rootBlocks.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = rootBlocks.plist; sourceTree = "<group>"; };
 		EECC5E441C59181800540FB3 /* ZKRCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRCollectionViewCell.h; sourceTree = "<group>"; };
 		EECC5E451C59181800540FB3 /* ZKRCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRCollectionViewCell.m; sourceTree = "<group>"; };
 		EECC5E461C59181800540FB3 /* ZKRCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKRCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -192,7 +195,7 @@
 		EE88D3921C552E47001300F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EE7E8DC21C58F2DF004E71DA /* rootBlocks.plist */,
+				EE97C8D71C6652C600331134 /* rootBlocks.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -417,6 +420,8 @@
 				EE88D3D51C566C95001300F8 /* UIBarButtonItem+CGLExtension.m */,
 				EE88D3D61C566C95001300F8 /* UIColor+Hex.h */,
 				EE88D3D71C566C95001300F8 /* UIColor+Hex.m */,
+				EE97C8D41C66529500331134 /* UIImage+Tint.h */,
+				EE97C8D51C66529500331134 /* UIImage+Tint.m */,
 				EE88D3D81C566C95001300F8 /* UIImage+Render.h */,
 				EE88D3D91C566C95001300F8 /* UIImage+Render.m */,
 				EE88D3DA1C566C95001300F8 /* UITextField+CGLplaceholderLabel.h */,
@@ -527,10 +532,10 @@
 				EE5E7A0D1C619FE800F30275 /* HeadLineCurrentPageIndicator.png in Resources */,
 				EECC5E481C59181800540FB3 /* ZKRCollectionViewCell.xib in Resources */,
 				EE5E7A111C619FE800F30275 /* placeholder.png in Resources */,
+				EE97C8D81C6652C600331134 /* rootBlocks.plist in Resources */,
 				EE5E7A0E1C619FE800F30275 /* HeadLineCurrentPageIndicator@2x.png in Resources */,
 				EE6646B71C5B964F0064CDA6 /* ZKRMineTableController.storyboard in Resources */,
 				EE88D3A21C552E47001300F8 /* LaunchScreen.storyboard in Resources */,
-				EE7E8DC31C58F2DF004E71DA /* rootBlocks.plist in Resources */,
 				EE5E7A101C619FE800F30275 /* HeadLinePageIndicator@2x.png in Resources */,
 				EE88D39F1C552E47001300F8 /* Assets.xcassets in Resources */,
 			);
@@ -591,6 +596,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE97C8D61C66529500331134 /* UIImage+Tint.m in Sources */,
 				EE88D3EF1C566EC7001300F8 /* ZKRFunViewController.m in Sources */,
 				EE88D3EC1C566EBE001300F8 /* ZKRHotViewController.m in Sources */,
 				EECC5E471C59181800540FB3 /* ZKRCollectionViewCell.m in Sources */,

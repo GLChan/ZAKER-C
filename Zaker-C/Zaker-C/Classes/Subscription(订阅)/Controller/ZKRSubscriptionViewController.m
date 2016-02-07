@@ -59,6 +59,7 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     
     //初始化 内容分类view
     [self loadData];
+    
     [self setupCollectionView];
     
 
@@ -80,8 +81,6 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
 //    
 //    [self.scroll addSubview:pageView];
     CycleView *cycleView = [[CycleView alloc] initWithFrame:CGRectMake(0, 0, CGLScreenW, 200)];
-    
-    
     
     [self.scroll addSubview:cycleView];
 }
@@ -115,6 +114,11 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     CGFloat collectionH = rows * cellWH;
     self.collectionView.cgl_height = collectionH;
     self.scroll.contentSize = CGSizeMake(0, collectionH + self.collectionView.cgl_y);
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(collectionViewLongPress:)];
+    longPress.minimumPressDuration = 1.0;
+    [contentTypeView addGestureRecognizer:longPress];
+    
 }
 
 - (void)loadData
@@ -131,6 +135,7 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     item.title = @"添加内容";
     item.pic = @"SubscriptionNightAddChannel";
     item.need_userinfo = @"NO";
+    item.block_color = @"#d3d7d4";
     
     [_typeArray addObject:item];
 }
@@ -155,7 +160,19 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     CGLFunc
 }
 
-
+- (void)collectionViewLongPress:(UILongPressGestureRecognizer *)gesture
+{
+    //长按cell可以获得该cell的indexPath.section和indexPath.row值。并且注意的是，长按事件和单击事件并不会冲突，彼此没有任何关系，
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        //删除频道 , 退出编辑(未实现)
+//        NSLog(@"UIGestureRecognizerStateBegan");
+    } else if (gesture.state == UIGestureRecognizerStateChanged){
+//        NSLog(@"UIGestureRecognizerStateChanged");
+    } else if (gesture.state == UIGestureRecognizerStateEnded) {
+//        NSLog(@"UIGestureRecognizerStateEnded");
+    }
+    
+}
 #pragma mark - ---| collection datasource |---
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -175,6 +192,8 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
 {
     
 }
+
+
 
 #pragma mark - ---| scroll delegate |---
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
