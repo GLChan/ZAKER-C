@@ -12,10 +12,13 @@
 
 
 @property (nonatomic, strong) NSString *need_userinfo;
-
+ /** block标题 */
 @property (nonatomic, strong) NSString *block_title;
+ /** block图标颜色 16进制 */
 @property (nonatomic, strong) NSString *block_color;
+ /** 跳转链接 */
 @property (nonatomic, strong) NSString *api_url;
+ /** 图标 */
 @property (nonatomic, strong) NSString *pic;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *pk;
