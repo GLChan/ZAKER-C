@@ -22,6 +22,7 @@
 #define ScrollViewH self.scrollView.bounds.size.height
 
 @interface CycleView()<UIScrollViewDelegate>
+
  /** 当前页码 */
 @property (nonatomic, assign) NSUInteger currentPageIndex;
  /** scrollView */
@@ -42,6 +43,7 @@
 
  /** 定时器 */
 @property (nonatomic, weak) NSTimer *timer;
+
 @end
 
 
@@ -237,7 +239,7 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
  */
 - (void)centerButtonClick:(CycleButon *)button
 {
-    NSLog(@"%@", button.item);
+//    NSLog(@"%@", button.item);
     
 }
 
