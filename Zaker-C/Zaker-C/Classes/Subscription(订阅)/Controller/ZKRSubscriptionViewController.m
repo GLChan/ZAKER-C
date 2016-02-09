@@ -116,7 +116,7 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     self.scroll.contentSize = CGSizeMake(0, collectionH + self.collectionView.cgl_y);
     
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(collectionViewLongPress:)];
-    longPress.minimumPressDuration = 0.5;
+    longPress.minimumPressDuration = 1.0;
     [contentTypeView addGestureRecognizer:longPress];
     
 }
@@ -166,20 +166,10 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     if (gesture.state == UIGestureRecognizerStateBegan) {
         //删除频道 , 退出编辑(未实现)
 //        NSLog(@"UIGestureRecognizerStateBegan");
-        //判断手势落点位置是否在路径上
-        NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
-        if (indexPath == nil) {
-            return;
-        }
-        //在路径上则开始移动该路径上的cell
-        [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
-        
     } else if (gesture.state == UIGestureRecognizerStateChanged){
 //        NSLog(@"UIGestureRecognizerStateChanged");
-        [self.collectionView updateInteractiveMovementTargetPosition:[gesture locationInView:self.collectionView]];
     } else if (gesture.state == UIGestureRecognizerStateEnded) {
 //        NSLog(@"UIGestureRecognizerStateEnded");
-        [self.collectionView endInteractiveMovement];
     }
     
 }
@@ -196,23 +186,6 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     cell.item = self.typeArray[indexPath.row];
     return cell;
 }
-
-// $$$$$ 02.08
-- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath{
-    //返回YES允许其item移动
-    return YES;
-}
-
-// $$$$$ 02.08
-- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath {
-    //取出源item数据
-    id objc = [self.typeArray objectAtIndex:sourceIndexPath.item];
-    //从资源数组中移除该数据
-    [self.typeArray removeObject:objc];
-    //将数据插入到资源数组中的目标位置上
-    [self.typeArray insertObject:objc atIndex:destinationIndexPath.item];
-}
-
 
 #pragma mark - ---| collection delegate |---
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
