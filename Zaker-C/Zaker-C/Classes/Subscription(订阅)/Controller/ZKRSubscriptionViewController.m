@@ -116,7 +116,7 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     self.scroll.contentSize = CGSizeMake(0, collectionH + self.collectionView.cgl_y);
     
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(collectionViewLongPress:)];
-    longPress.minimumPressDuration = 1.0;
+    longPress.minimumPressDuration = 0.5;
     [contentTypeView addGestureRecognizer:longPress];
     
 }
@@ -165,14 +165,26 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     //长按cell可以获得该cell的indexPath.section和indexPath.row值。并且注意的是，长按事件和单击事件并不会冲突，彼此没有任何关系，
     if (gesture.state == UIGestureRecognizerStateBegan) {
         //删除频道 , 退出编辑(未实现)
-//        NSLog(@"UIGestureRecognizerStateBegan");
+        //        NSLog(@"UIGestureRecognizerStateBegan");
+        //判断手势落点位置是否在路径上
+        NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
+        if (indexPath == nil) {
+            return;
+        }
+        //在路径上则开始移动该路径上的cell
+        [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
+        
     } else if (gesture.state == UIGestureRecognizerStateChanged){
-//        NSLog(@"UIGestureRecognizerStateChanged");
+        //        NSLog(@"UIGestureRecognizerStateChanged");
+        [self.collectionView updateInteractiveMovementTargetPosition:[gesture locationInView:self.collectionView]];
     } else if (gesture.state == UIGestureRecognizerStateEnded) {
-//        NSLog(@"UIGestureRecognizerStateEnded");
+        //        NSLog(@"UIGestureRecognizerStateEnded");
+        [self.collectionView endInteractiveMovement];
     }
     
 }
+
+
 #pragma mark - ---| collection datasource |---
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -193,7 +205,21 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     
 }
 
+// $$$$$ 02.08
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath{
+    //返回YES允许其item移动
+    return YES;
+}
 
+// $$$$$ 02.08
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath {
+    //取出源item数据
+    id objc = [self.typeArray objectAtIndex:sourceIndexPath.item];
+    //从资源数组中移除该数据
+    [self.typeArray removeObject:objc];
+    //将数据插入到资源数组中的目标位置上
+    [self.typeArray insertObject:objc atIndex:destinationIndexPath.item];
+}
 
 #pragma mark - ---| scroll delegate |---
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
