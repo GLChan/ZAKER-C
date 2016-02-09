@@ -157,7 +157,10 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
  /** 监听右上角搜索按钮点击 */
 - (void)searchClick
 {
-    CGLFunc
+//    CGLFunc
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor lightGrayColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)collectionViewLongPress:(UILongPressGestureRecognizer *)gesture
