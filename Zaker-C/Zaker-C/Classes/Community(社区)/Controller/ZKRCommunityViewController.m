@@ -9,6 +9,8 @@
 #import "ZKRCommunityViewController.h"
 
 #import "UIBarButtonItem+CGLExtension.h"
+#import "ZKRMineTableController.h"
+#import "ZKRAccountBarButtonItem.h"
 @interface ZKRCommunityViewController ()
 
 @end
@@ -20,13 +22,9 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"社区";
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"life_my_account" highImage:@"life_my_account" target:self action:@selector(accountClick)];
+    self.navigationItem.leftBarButtonItem = [ZKRAccountBarButtonItem itemWithImage:@"life_my_account" highImage:@"life_my_account" navigationController:self.navigationController];
 }
 
-- (void)accountClick
-{
-    CGLFunc
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
