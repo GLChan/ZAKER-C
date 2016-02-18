@@ -22,6 +22,7 @@
     [super viewDidLoad];
 
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    
     //设置导航条的阴影图片.
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
     self.navigationItem.title = @"我的";
