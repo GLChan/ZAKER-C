@@ -21,6 +21,7 @@ CGFloat const margin = 1;
 
 #import "ZKRMineTableController.h"
 #import "ZKRRootTypeItem.h"
+#import "ZKRSlideView.h"
 @interface ZKRSubscriptionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
 
  /** 整个界面的一个scrollView */
@@ -32,6 +33,8 @@ CGFloat const margin = 1;
  /** 内容分类的数组 */
 @property (nonatomic, strong) NSMutableArray *typeArray;
 
+@property (nonatomic, weak) ZKRSlideView *slideView;
+
 @end
 
 #pragma mark - ---| static |---
@@ -39,6 +42,16 @@ static NSString *ID = @"cell";
 static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.php?";
 
 @implementation ZKRSubscriptionViewController
+#pragma mark - ---| lazy load |---
+- (ZKRSlideView *)slideView
+{
+    if (!_slideView) {
+        _slideView = [[[NSBundle mainBundle] loadNibNamed:@"ZKRSlideView" owner:nil options:nil]lastObject];
+        _slideView.cgl_y = CGLScreenH;
+    }
+    return _slideView;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -165,25 +178,41 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
 
 - (void)collectionViewLongPress:(UILongPressGestureRecognizer *)gesture
 {
-    //长按cell可以获得该cell的indexPath.section和indexPath.row值。并且注意的是，长按事件和单击事件并不会冲突，彼此没有任何关系，
     if (gesture.state == UIGestureRecognizerStateBegan) {
-        //删除频道 , 退出编辑(未实现)
-        //        NSLog(@"UIGestureRecognizerStateBegan");
-        //判断手势落点位置是否在路径上
-        NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
-        if (indexPath == nil) {
-            return;
-        }
-        //在路径上则开始移动该路径上的cell
-        [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
+//        NSLog(@"UIGestureRecognizerStateBegan");
+        
+        [[UIApplication sharedApplication].keyWindow addSubview:self.slideView];
+        
+        [UIView animateWithDuration:0.3 animations:^{
+            self.slideView.cgl_y = CGLScreenH - 100;
+        }];
         
     } else if (gesture.state == UIGestureRecognizerStateChanged){
-        //        NSLog(@"UIGestureRecognizerStateChanged");
-        [self.collectionView updateInteractiveMovementTargetPosition:[gesture locationInView:self.collectionView]];
+//        NSLog(@"UIGestureRecognizerStateChanged");
     } else if (gesture.state == UIGestureRecognizerStateEnded) {
-        //        NSLog(@"UIGestureRecognizerStateEnded");
-        [self.collectionView endInteractiveMovement];
+//        NSLog(@"UIGestureRecognizerStateEnded");
     }
+    //长按cell可以获得该cell的indexPath.section和indexPath.row值。并且注意的是，长按事件和单击事件并不会冲突，彼此没有任何关系，
+//    if (gesture.state == UIGestureRecognizerStateBegan) {
+//        //删除频道 , 退出编辑(未实现)
+//        //        NSLog(@"UIGestureRecognizerStateBegan");
+//        //判断手势落点位置是否在路径上
+//        NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
+//        if (indexPath == nil) {
+//            return;
+//        }
+//        //在路径上则开始移动该路径上的cell
+//        [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
+//        
+//    } else if (gesture.state == UIGestureRecognizerStateChanged){
+//        //        NSLog(@"UIGestureRecognizerStateChanged");
+//        [self.collectionView updateInteractiveMovementTargetPosition:[gesture locationInView:self.collectionView]];
+//    } else if (gesture.state == UIGestureRecognizerStateEnded) {
+//        //        NSLog(@"UIGestureRecognizerStateEnded");
+//        [self.collectionView endInteractiveMovement];
+//    }
+    
+    
     
 }
 
