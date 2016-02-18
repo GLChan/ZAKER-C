@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZKRSlideView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dz9-jm-DlI">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="100"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="删除频道" image="SubscriptionDeleteBlock-0-Day">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="deleteChannelButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="2PO-2R-KVV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG9-nc-ZKg">
+                    <rect key="frame" x="187" y="0.0" width="187.5" height="100"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="退出编辑" image="SubscriptionFinishBlockEdit-0-Day">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="tEQ-oR-pBu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.99607843139999996" green="0.2666666667" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Dz9-jm-DlI" firstAttribute="height" secondItem="WG9-nc-ZKg" secondAttribute="height" id="1EN-XM-RO1"/>
+                <constraint firstAttribute="trailing" secondItem="WG9-nc-ZKg" secondAttribute="trailing" id="AeB-pH-1cD"/>
+                <constraint firstItem="WG9-nc-ZKg" firstAttribute="leading" secondItem="Dz9-jm-DlI" secondAttribute="trailing" id="Q9u-bf-hy9"/>
+                <constraint firstItem="Dz9-jm-DlI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="afC-2f-Duf"/>
+                <constraint firstAttribute="bottom" secondItem="Dz9-jm-DlI" secondAttribute="bottom" id="bQm-pe-vaU"/>
+                <constraint firstItem="Dz9-jm-DlI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="huu-6U-F9v"/>
+                <constraint firstItem="WG9-nc-ZKg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jbf-bm-5Dw"/>
+                <constraint firstItem="Dz9-jm-DlI" firstAttribute="width" secondItem="WG9-nc-ZKg" secondAttribute="width" id="uJD-Ot-sU6"/>
+                <constraint firstAttribute="bottom" secondItem="WG9-nc-ZKg" secondAttribute="bottom" id="zbq-Tc-q3p"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="SubscriptionDeleteBlock-0-Day" width="32" height="32"/>
+        <image name="SubscriptionFinishBlockEdit-0-Day" width="32" height="32"/>
+    </resources>
+</document>
