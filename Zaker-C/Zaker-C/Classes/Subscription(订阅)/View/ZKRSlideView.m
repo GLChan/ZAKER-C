@@ -25,7 +25,7 @@
 }
 
 - (IBAction)cancelButtonClick:(UIButton *)sender {
-    NSLog(@"cancelButtonClick");
+//    NSLog(@"cancelButtonClick");
     [UIView animateWithDuration:0.3 animations:^{
         self.cgl_y = CGLScreenH;
     }];
@@ -36,7 +36,7 @@
 }
 
 - (IBAction)deleteChannelButton:(UIButton *)sender {
-    NSLog(@"deleteChannelButton");
+//    NSLog(@"deleteChannelButton");
     
 }
 

@@ -12,7 +12,7 @@
 
 - (void)layoutSubviews
 {
-    UIImageView *imageView = self.imageView;
+//    UIImageView *imageView = self.imageView;
 
 }
 
