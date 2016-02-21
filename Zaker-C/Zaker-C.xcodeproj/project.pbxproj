@@ -44,6 +44,7 @@
 		EECC5E471C59181800540FB3 /* ZKRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EECC5E451C59181800540FB3 /* ZKRCollectionViewCell.m */; };
 		EECC5E481C59181800540FB3 /* ZKRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECC5E461C59181800540FB3 /* ZKRCollectionViewCell.xib */; };
 		EEDF82E91C5C631100FF5AA8 /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDF82E81C5C631100FF5AA8 /* HFStretchableTableHeaderView.m */; };
+		EEE7F27E1C757359000222AD /* ZKRAccountBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE7F27D1C757359000222AD /* ZKRAccountBarButtonItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,8 @@
 		EECC5E461C59181800540FB3 /* ZKRCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKRCollectionViewCell.xib; sourceTree = "<group>"; };
 		EEDF82E71C5C631100FF5AA8 /* HFStretchableTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFStretchableTableHeaderView.h; sourceTree = "<group>"; };
 		EEDF82E81C5C631100FF5AA8 /* HFStretchableTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFStretchableTableHeaderView.m; sourceTree = "<group>"; };
+		EEE7F27C1C757359000222AD /* ZKRAccountBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRAccountBarButtonItem.h; sourceTree = "<group>"; };
+		EEE7F27D1C757359000222AD /* ZKRAccountBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRAccountBarButtonItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +358,8 @@
 		EE88D3B91C55316A001300F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EEE7F27C1C757359000222AD /* ZKRAccountBarButtonItem.h */,
+				EEE7F27D1C757359000222AD /* ZKRAccountBarButtonItem.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -632,6 +637,7 @@
 				EE88D3E91C566EB5001300F8 /* ZKRSubscriptionViewController.m in Sources */,
 				EE00B8CB1C754D1A001A444B /* ZKRSlideViewButton.m in Sources */,
 				EE88D3C31C55316A001300F8 /* AppDelegate.m in Sources */,
+				EEE7F27E1C757359000222AD /* ZKRAccountBarButtonItem.m in Sources */,
 				EEDF82E91C5C631100FF5AA8 /* HFStretchableTableHeaderView.m in Sources */,
 				EE88D3E11C566C95001300F8 /* UITextField+CGLplaceholderLabel.m in Sources */,
 				EE6646B41C5B96200064CDA6 /* ZKRMineTableController.m in Sources */,
