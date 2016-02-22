@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B36F19E6F7997B24383C5E1F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 956F6DB921F22EE3E5927AC7 /* libPods.a */; };
+		E25BC3731C7A20D2000C1AD0 /* ZKRAccountBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E25BC3721C7A20D2000C1AD0 /* ZKRAccountBarButtonItem.m */; };
 		EE5E7A0A1C619FE800F30275 /* CycleButon.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5E79FF1C619FE800F30275 /* CycleButon.m */; };
 		EE5E7A0B1C619FE800F30275 /* CyclePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5E7A011C619FE800F30275 /* CyclePageControl.m */; };
 		EE5E7A0C1C619FE800F30275 /* CycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5E7A031C619FE800F30275 /* CycleView.m */; };
@@ -47,6 +48,8 @@
 		5E0CBED9235CE036F79B1193 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		956F6DB921F22EE3E5927AC7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A66997927A6C5856ABED30 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E25BC3711C7A20D2000C1AD0 /* ZKRAccountBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRAccountBarButtonItem.h; sourceTree = "<group>"; };
+		E25BC3721C7A20D2000C1AD0 /* ZKRAccountBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRAccountBarButtonItem.m; sourceTree = "<group>"; };
 		EE5E79FE1C619FE800F30275 /* CycleButon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CycleButon.h; sourceTree = "<group>"; };
 		EE5E79FF1C619FE800F30275 /* CycleButon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CycleButon.m; sourceTree = "<group>"; };
 		EE5E7A001C619FE800F30275 /* CyclePageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CyclePageControl.h; sourceTree = "<group>"; };
@@ -134,6 +137,15 @@
 				5E0CBED9235CE036F79B1193 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E25BC3701C7A20D2000C1AD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E25BC3711C7A20D2000C1AD0 /* ZKRAccountBarButtonItem.h */,
+				E25BC3721C7A20D2000C1AD0 /* ZKRAccountBarButtonItem.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EE5E79FD1C619FE800F30275 /* CGLCyclePlayer */ = {
@@ -321,7 +333,7 @@
 			children = (
 				EE88D3B71C55316A001300F8 /* Controller */,
 				EE88D3B81C55316A001300F8 /* Model */,
-				EE88D3B91C55316A001300F8 /* View */,
+				E25BC3701C7A20D2000C1AD0 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -342,13 +354,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		EE88D3B91C55316A001300F8 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		EE88D3BA1C55316A001300F8 /* Other */ = {
@@ -596,6 +601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25BC3731C7A20D2000C1AD0 /* ZKRAccountBarButtonItem.m in Sources */,
 				EE97C8D61C66529500331134 /* UIImage+Tint.m in Sources */,
 				EE88D3EF1C566EC7001300F8 /* ZKRFunViewController.m in Sources */,
 				EE88D3EC1C566EBE001300F8 /* ZKRHotViewController.m in Sources */,
