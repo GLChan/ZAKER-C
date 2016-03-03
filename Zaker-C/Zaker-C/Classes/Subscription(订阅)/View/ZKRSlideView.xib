@@ -11,17 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dz9-jm-DlI">
-                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="100"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" title="删除频道" image="SubscriptionDeleteBlock-0-Day">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="deleteChannelButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="2PO-2R-KVV"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG9-nc-ZKg">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WG9-nc-ZKg" customClass="ZKRSlideViewButton">
                     <rect key="frame" x="187" y="0.0" width="187.5" height="100"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal" title="退出编辑" image="SubscriptionFinishBlockEdit-0-Day">
@@ -29,6 +19,16 @@
                     </state>
                     <connections>
                         <action selector="cancelButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="tEQ-oR-pBu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dz9-jm-DlI" customClass="ZKRSlideViewButton">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="100"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="删除频道" image="SubscriptionDeleteBlock-0-Day">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="deleteChannelButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="2PO-2R-KVV"/>
                     </connections>
                 </button>
             </subviews>
@@ -46,6 +46,10 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancelButton" destination="WG9-nc-ZKg" id="UNY-X3-kep"/>
+                <outlet property="delButton" destination="Dz9-jm-DlI" id="qKd-VS-ep9"/>
+            </connections>
         </view>
     </objects>
     <resources>

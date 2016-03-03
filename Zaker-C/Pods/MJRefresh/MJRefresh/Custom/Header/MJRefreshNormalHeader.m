@@ -20,7 +20,8 @@
 - (UIImageView *)arrowView
 {
     if (!_arrowView) {
-        UIImage *image = [UIImage imageNamed:MJRefreshSrcName(@"arrow.png")] ?: [UIImage imageNamed:MJRefreshFrameworkSrcName(@"arrow.png")];
+        UIImage *image = [UIImage imageNamed:@"RefreshControlArrowBlack"] ?: [UIImage imageNamed:@"RefreshControlArrowBlack"];
+//        UIImage *image = [UIImage imageNamed:MJRefreshSrcName(@"arrow.png")] ?: [UIImage imageNamed:MJRefreshFrameworkSrcName(@"arrow.png")];
         UIImageView *arrowView = [[UIImageView alloc] initWithImage:image];
         [self addSubview:_arrowView = arrowView];
     }
@@ -101,14 +102,17 @@
             [self.loadingView stopAnimating];
             self.arrowView.hidden = NO;
             [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
-                self.arrowView.transform = CGAffineTransformIdentity;
+//                self.arrowView.transform = CGAffineTransformIdentity;
+                self.arrowView.transform = CGAffineTransformMakeRotation(0.000001 - M_PI * 2);
             }];
         }
     } else if (state == MJRefreshStatePulling) {
         [self.loadingView stopAnimating];
         self.arrowView.hidden = NO;
         [UIView animateWithDuration:MJRefreshFastAnimationDuration animations:^{
-            self.arrowView.transform = CGAffineTransformMakeRotation(0.000001 - M_PI);
+            self.arrowView.transform = CGAffineTransformMakeRotation(M_PI);
+//            self.arrowView.transform = CGAffineTransformMakeRotation(0.000001 - M_PI);
+
         }];
     } else if (state == MJRefreshStateRefreshing) {
         self.loadingView.alpha = 1.0; // 防止refreshing -> idle的动画完毕动作没有被执行

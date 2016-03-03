@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSString *api_url;
  /** 图标 */
 @property (nonatomic, strong) NSString *pic;
+ /** 标题 */
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *pk;
 @property (nonatomic, strong) NSString *is_end;

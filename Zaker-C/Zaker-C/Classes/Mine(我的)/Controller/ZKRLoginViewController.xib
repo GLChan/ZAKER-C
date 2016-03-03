@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZKRLoginViewController">
+            <connections>
+                <outlet property="centerView" destination="MIT-0V-PF2" id="12I-0J-X1m"/>
+                <outlet property="closeButton" destination="jMo-0v-UDE" id="gCj-kA-El0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gg-hQ-imi">
+                    <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPU-zE-Pff">
+                            <rect key="frame" x="87" y="16" width="201" height="50"/>
+                            <state key="normal" image="loginForSinaWeiboButton"/>
+                            <connections>
+                                <action selector="weiboLoginButtonClick:" destination="-1" eventType="touchUpInside" id="lHm-qF-7r0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUv-RV-Bg0">
+                            <rect key="frame" x="150" y="156" width="74" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <state key="normal" title="ZAKER账号登录">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="zakerLoginButtonClick:" destination="-1" eventType="touchUpInside" id="aah-MK-a9B"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qC-3z-PXu">
+                            <rect key="frame" x="87" y="86" width="201" height="50"/>
+                            <state key="normal" image="loginForTencentButton"/>
+                            <connections>
+                                <action selector="tencentLoginButtonClick:" destination="-1" eventType="touchUpInside" id="Esj-Bx-dS9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="hUv-RV-Bg0" firstAttribute="centerX" secondItem="4gg-hQ-imi" secondAttribute="centerX" id="7PZ-NA-TFf"/>
+                        <constraint firstItem="hUv-RV-Bg0" firstAttribute="top" secondItem="9qC-3z-PXu" secondAttribute="bottom" constant="20" id="Jni-X4-1C0"/>
+                        <constraint firstItem="9qC-3z-PXu" firstAttribute="centerX" secondItem="4gg-hQ-imi" secondAttribute="centerX" id="c1y-kw-jJc"/>
+                        <constraint firstItem="uPU-zE-Pff" firstAttribute="centerX" secondItem="4gg-hQ-imi" secondAttribute="centerX" id="dww-tR-h1M"/>
+                        <constraint firstAttribute="height" constant="200" id="pKc-wG-2pQ"/>
+                        <constraint firstAttribute="bottom" secondItem="hUv-RV-Bg0" secondAttribute="bottom" constant="20" id="qxe-ac-b9q"/>
+                        <constraint firstItem="9qC-3z-PXu" firstAttribute="top" secondItem="uPU-zE-Pff" secondAttribute="bottom" constant="20" id="ziS-WG-8rZ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMo-0v-UDE">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="rwm-Oy-g8t"/>
+                        <constraint firstAttribute="height" constant="40" id="zUb-Hq-dQm"/>
+                    </constraints>
+                    <state key="normal" image="Close-gray-10"/>
+                    <connections>
+                        <action selector="closeButtonClick:" destination="-1" eventType="touchUpInside" id="ZIN-95-R4V"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIT-0V-PF2">
+                    <rect key="frame" x="0.0" y="80" width="375" height="375"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MIT-0V-PF2" secondAttribute="height" multiplier="1:1" id="Bzl-rj-VTj"/>
+                        <constraint firstAttribute="width" secondItem="MIT-0V-PF2" secondAttribute="height" multiplier="1:1" id="dgg-Gb-RFG"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="dgg-Gb-RFG"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jMo-0v-UDE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6aX-dI-yt2"/>
+                <constraint firstItem="MIT-0V-PF2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="Agp-yv-VrT"/>
+                <constraint firstAttribute="bottom" secondItem="4gg-hQ-imi" secondAttribute="bottom" id="Qw7-mJ-5He"/>
+                <constraint firstItem="4gg-hQ-imi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TPh-Tt-BeE"/>
+                <constraint firstItem="jMo-0v-UDE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VVb-Qd-Zna"/>
+                <constraint firstItem="MIT-0V-PF2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aKc-Rt-cII"/>
+                <constraint firstAttribute="trailing" secondItem="MIT-0V-PF2" secondAttribute="trailing" id="bHM-tR-iXk"/>
+                <constraint firstItem="MIT-0V-PF2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="e9I-ex-gBX"/>
+                <constraint firstAttribute="trailing" secondItem="4gg-hQ-imi" secondAttribute="trailing" id="g6l-BD-xjd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Close-gray-10" width="10" height="10"/>
+        <image name="loginForSinaWeiboButton" width="201" height="50"/>
+        <image name="loginForTencentButton" width="201" height="50"/>
+    </resources>
+</document>

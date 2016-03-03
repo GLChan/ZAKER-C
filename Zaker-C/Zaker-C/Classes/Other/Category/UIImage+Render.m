@@ -11,9 +11,19 @@
     
     UIImage *image = [UIImage imageNamed:imageName];
 //    UIImage *image = [UIImage reSizeImage:[UIImage imageNamed:imageName] toSize:CGSizeMake(25, 25)];;
+
+    return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+}
+
+
++ (UIImage *)selImageWithOriginalRender:(NSString *)imageName {
+    
+    UIImage *image = [[UIImage imageNamed:imageName] imageWithTintColor:ZKRRedColor];
+    //    UIImage *image = [UIImage reSizeImage:[UIImage imageNamed:imageName] toSize:CGSizeMake(25, 25)];;
     
     return [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
+
 
 + (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize
 {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZKRHotViewController : UIViewController
+@interface ZKRHotViewController : UITableViewController
 
 @end

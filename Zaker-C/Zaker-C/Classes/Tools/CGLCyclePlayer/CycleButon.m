@@ -14,6 +14,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    
     [self setupImageView];
     [self setupTitleLabel];
     self.highlighted = NO;

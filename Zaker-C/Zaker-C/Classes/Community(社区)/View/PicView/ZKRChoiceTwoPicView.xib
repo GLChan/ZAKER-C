@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ydn-uu-BQG" customClass="ZKRChoiceTwoPicView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YWN-lI-eYZ">
+                    <rect key="frame" x="192" y="0.0" width="183" height="180"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-Z0-NTR">
+                    <rect key="frame" x="0.0" y="0.0" width="183" height="180"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="kRp-Z0-NTR" secondAttribute="height" multiplier="188:185" id="wcT-AW-or9"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ri-cQ-pqb" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="41" y="40" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0Ri-cQ-pqb" secondAttribute="height" multiplier="1:1" id="K0L-Zc-Akr"/>
+                        <constraint firstAttribute="width" constant="100" id="zxc-f9-kuh"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHE-4r-jdv" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="233" y="40" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="nHE-4r-jdv" secondAttribute="height" multiplier="1:1" id="Bet-ch-GvV"/>
+                        <constraint firstAttribute="height" constant="100" id="tsb-dj-UOW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="YWN-lI-eYZ" firstAttribute="top" secondItem="Ydn-uu-BQG" secondAttribute="top" id="20y-CW-Awz"/>
+                <constraint firstItem="nHE-4r-jdv" firstAttribute="centerX" secondItem="YWN-lI-eYZ" secondAttribute="centerX" id="H1c-j6-PFD"/>
+                <constraint firstItem="YWN-lI-eYZ" firstAttribute="leading" secondItem="kRp-Z0-NTR" secondAttribute="trailing" constant="5" id="QIz-XM-Jhq"/>
+                <constraint firstAttribute="trailing" secondItem="YWN-lI-eYZ" secondAttribute="trailing" id="QT3-vn-fLb"/>
+                <constraint firstItem="0Ri-cQ-pqb" firstAttribute="centerY" secondItem="kRp-Z0-NTR" secondAttribute="centerY" id="R0w-Rq-mZC"/>
+                <constraint firstItem="YWN-lI-eYZ" firstAttribute="width" secondItem="kRp-Z0-NTR" secondAttribute="width" id="Upb-rQ-lQr"/>
+                <constraint firstItem="nHE-4r-jdv" firstAttribute="centerY" secondItem="YWN-lI-eYZ" secondAttribute="centerY" id="Vk0-pe-Rcv"/>
+                <constraint firstItem="0Ri-cQ-pqb" firstAttribute="centerX" secondItem="kRp-Z0-NTR" secondAttribute="centerX" id="ZMH-M4-Qcf"/>
+                <constraint firstItem="kRp-Z0-NTR" firstAttribute="leading" secondItem="Ydn-uu-BQG" secondAttribute="leading" id="ZR8-Q8-aXt"/>
+                <constraint firstItem="YWN-lI-eYZ" firstAttribute="height" secondItem="kRp-Z0-NTR" secondAttribute="height" id="bVr-Ze-2xT"/>
+                <constraint firstItem="kRp-Z0-NTR" firstAttribute="top" secondItem="Ydn-uu-BQG" secondAttribute="top" id="gLg-C8-5pa"/>
+                <constraint firstAttribute="bottom" secondItem="kRp-Z0-NTR" secondAttribute="bottom" id="iuv-Yk-IA0"/>
+                <constraint firstAttribute="bottom" secondItem="YWN-lI-eYZ" secondAttribute="bottom" id="oZ7-5h-omf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="QIz-XM-Jhq"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="firstImageView" destination="kRp-Z0-NTR" id="fS9-0R-10W"/>
+                <outlet property="progressView1" destination="0Ri-cQ-pqb" id="Sb8-bo-JYM"/>
+                <outlet property="progressView2" destination="nHE-4r-jdv" id="hix-di-x2L"/>
+                <outlet property="secondImageView" destination="YWN-lI-eYZ" id="6QJ-wS-ylD"/>
+            </connections>
+            <point key="canvasLocation" x="256.5" y="149"/>
+        </view>
+    </objects>
+</document>

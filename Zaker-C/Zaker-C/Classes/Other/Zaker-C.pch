@@ -11,7 +11,10 @@
 #import "UIColor+Hex.h"
 #import "UIImage+Render.h"
 #import "UIView+Frame.h"
+#import "NSObject+Object.h"
+#import "UIView+Init.h"
 
+#define LOCALDESTOP @"/Users/CGL/Desktop/zaker.plist"
 
 /*****屏幕*******/
 #define CGLScreenW [UIScreen mainScreen].bounds.size.width

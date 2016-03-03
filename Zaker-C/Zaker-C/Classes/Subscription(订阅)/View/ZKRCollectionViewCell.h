@@ -12,6 +12,10 @@
 
 @interface ZKRCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, assign) NSInteger channelIndex;
+
 @property (nonatomic, strong) ZKRRootTypeItem *item;
+
+@property (nonatomic, weak) UIImageView *ttickImageView;
 
 @end
