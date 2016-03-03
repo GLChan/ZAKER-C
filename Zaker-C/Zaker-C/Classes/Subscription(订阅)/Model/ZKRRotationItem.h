@@ -21,5 +21,16 @@
  /** 标签信息 */
 @property (nonatomic, strong) NSDictionary *tag_info;
 
+#pragma mark - ---| 频道 |---
+@property (nonatomic, strong) NSString *block_api_url;
+
+#pragma mark - ---| 专题/夜读 |---
+@property (nonatomic, strong) NSString *topic_api_url;
+
+#pragma mark - ---| 文章 |---
+
+#pragma mark - ---| 讨论/话题 |---
+@property (nonatomic, strong) NSString *discussion_api_url;
+
 
 @end

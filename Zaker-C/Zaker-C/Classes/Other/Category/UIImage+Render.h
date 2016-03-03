@@ -8,6 +8,8 @@
 @interface UIImage (Render)
 + (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize;
 + (UIImage *)imageWithOriginalRender:(NSString *)imageName;
++ (UIImage *)selImageWithOriginalRender:(NSString *)imageName;
+
 
 - (UIImage *) imageWithTintColor:(UIColor *)tintColor;
 - (UIImage *) imageWithGradientTintColor:(UIColor *)tintColor;

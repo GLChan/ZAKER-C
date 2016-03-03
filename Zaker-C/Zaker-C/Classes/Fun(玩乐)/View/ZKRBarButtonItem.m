@@ -23,11 +23,13 @@
     NSAttributedString *att = [[NSAttributedString alloc] initWithString:self.titleLabel.text attributes:attD];
     
     self.titleLabel.attributedText = att;
-    self.titleLabel.frame = CGRectMake(0, 0, width, height);
+    self.titleLabel.frame = CGRectMake(10, 0, width, height);
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.imageView.frame = CGRectMake(width, 0, self.cgl_width - width, height);
     
     [self layoutIfNeeded];
 }
+
+- (void)setHighlighted:(BOOL)highlighted{}
 
 @end

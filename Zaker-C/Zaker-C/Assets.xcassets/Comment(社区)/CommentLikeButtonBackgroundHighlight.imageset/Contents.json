@@ -1,0 +1,68 @@
+{
+  "images" : [
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 2,
+          "top" : 2,
+          "right" : 2,
+          "left" : 2
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "CommentLikeButtonBackgroundHighlight.png",
+      "scale" : "1x"
+    },
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 6,
+          "top" : 6,
+          "right" : 6,
+          "left" : 6
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "CommentLikeButtonBackgroundHighlight@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1,
+          "height" : 1
+        },
+        "cap-insets" : {
+          "bottom" : 9,
+          "top" : 9,
+          "right" : 9,
+          "left" : 9
+        }
+      },
+      "idiom" : "universal",
+      "filename" : "CommentLikeButtonBackgroundHighlight@3x.png",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
+  }
+}

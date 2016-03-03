@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ZKRSlideViewButton;
 @interface ZKRSlideView : UIView
+@property (nonatomic, strong) void (^deallocBlock)() ;
+ /** del button enable */
+@property (nonatomic, assign) BOOL setupDelButtonEnable;
 
 @end

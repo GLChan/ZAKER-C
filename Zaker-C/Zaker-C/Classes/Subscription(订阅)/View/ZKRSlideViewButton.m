@@ -13,15 +13,22 @@
 - (void)layoutSubviews
 {
 //    UIImageView *imageView = self.imageView;
+    [super layoutSubviews];
+    
+    CGFloat imageViewCenterX = self.cgl_width * 0.5;
+    CGFloat imageViewCenterY = self.cgl_height * 0.5 - 15;
+    self.imageView.center = CGPointMake(imageViewCenterX, imageViewCenterY);
 
+    CGFloat titleViewCenterX = self.cgl_width * 0.5;
+    CGFloat titleViewCenterY = self.cgl_height * 0.5 + 15;
+    self.titleLabel.center = CGPointMake(titleViewCenterX, titleViewCenterY);
+    
+    [self layoutIfNeeded];
+    
+    [self setTitleColor:[UIColor colorWithWhite:1 alpha:0.5] forState:UIControlStateDisabled];
+    
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+- (void)setHighlighted:(BOOL)highlighted{}
 
 @end
