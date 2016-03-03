@@ -1,7 +1,14 @@
 # ZAKER-C
 #### 仿ZAKER的iOS客户端
 
+- ![](http://ww4.sinaimg.cn/large/6f23d9bagw1f1jzpxt8hhj20v90j5tdv.jpg)
+- ![](http://ww2.sinaimg.cn/large/6f23d9bagw1f1jznm0zsqj20v90j5wlc.jpg)
+- ![](http://ww1.sinaimg.cn/large/6f23d9bagw1f1jzo7wtahj20v90j5aeo.jpg)
+
+项目要点后面总结~~~~~~
+
 --
+
 - 02.08
 	+ `订阅`中的collectionView可以移动变换位置
 - 02.07
@@ -13,6 +20,5 @@
   + 简单做了`订阅`界面和`我的`界面
 
 
-
---
+## License
 © 2015~2016 GLChen. This code is distributed under the CC0 1.0 Universal license. See LICENSE in this directory.
