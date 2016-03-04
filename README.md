@@ -1,5 +1,6 @@
 # ZAKER-C
 #### 仿ZAKER的iOS客户端
+- 项目会现在rekaz(https://github.com/GLChan/rekaz )先作小更新, ZAKER-C用来做大更新
 
 - ![](http://ww4.sinaimg.cn/large/6f23d9bagw1f1jzpxt8hhj20v90j5tdv.jpg)
 - ![](http://ww2.sinaimg.cn/large/6f23d9bagw1f1jznm0zsqj20v90j5wlc.jpg)
