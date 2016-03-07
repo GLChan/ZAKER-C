@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  collection 频道对象
+ */
 @interface ZKRRootTypeItem : NSObject
 
 

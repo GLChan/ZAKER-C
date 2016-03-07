@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZKRTabBarController.h"
+#import "ZKRTopWindow.h"
 @interface AppDelegate ()
 
 @end
@@ -22,10 +23,40 @@
     ZKRTabBarController *tabBarC = [[ZKRTabBarController alloc] init];
     self.window.rootViewController = tabBarC;
 
+    // 显示窗口:设置UIApplication主窗口,显示窗口
+    [self.window makeKeyAndVisible];
     
+    // 显示顶层window
+    [ZKRTopWindow showWithStatusBarClickBlock:^{
+        [self searchAllScrollViewsInView:application.keyWindow];
+    }];
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+/**
+ *  查找出view里面的所有scrollView
+ */
+- (void)searchAllScrollViewsInView:(UIView *)view
+{
+    // 如果不在keyWindow范围内（不跟window重叠），直接返回
+    if (![view cgl_intersectWithView:nil]) return;
+    
+    // 遍历所有的子控件
+    for (UIView *subview in view.subviews) {
+        [self searchAllScrollViewsInView:subview];
+    }
+    
+    // 如果不是scrollView，直接返回
+    if (![view isKindOfClass:[UIScrollView class]]) return;
+    
+    // 滚动scrollView
+    UIScrollView *scrollView = (UIScrollView *)view;
+    CGPoint offset = scrollView.contentOffset;
+    offset.y = - scrollView.contentInset.top;
+    [scrollView setContentOffset:offset animated:YES];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

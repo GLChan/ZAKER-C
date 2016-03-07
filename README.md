@@ -7,8 +7,20 @@
 
 项目要点后面总结~~~~~~
 
---
-
+## 更新日志
+- 03.07
+	1. 新增评论(还有许多小问题未解决,睡觉 02:30)
+		- <img src="http://ww3.sinaimg.cn/large/6f23d9bagw1f1npg3kmvij20pi16y440.jpg" width="25%" height="25%">
+- 03.06
+	1. 解决滑动返回导航栏消失的bug(这种bug怎么好意思说出来= =)
+- 03.05 16:21 
+	1. 全局滑动返回
+	2. 点击状态栏让有滑动的view移动到顶部
+	3. 时间格式更新
+- 03.05 10:58 更新`订阅`界面右上角`搜索`跳转的`频道`
+	- ![](http://ww1.sinaimg.cn/large/6f23d9bagw1f1lswvef7ag207t0ek47b.gif)
+- 03.05 01:02 更新`订阅`界面右上角`搜索`跳转的`精选`
+	- <img src="http://ww4.sinaimg.cn/large/6f23d9bagw1f1lc4d56ltj20pi16yjx2.jpg" width="25%" height="25%">
 - 02.08
 	+ `订阅`中的collectionView可以移动变换位置
 - 02.07

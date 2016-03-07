@@ -7,6 +7,9 @@
 //
 
 #import "ZKRCategoryButton.h"
+#import "ZKRFunCategoryItem.h"
+
+#import "UIButton+WebCache.h"
 
 @implementation ZKRCategoryButton
 - (void)layoutSubviews
@@ -17,12 +20,24 @@
     CGFloat height = self.cgl_height;
     
     self.titleLabel.center = CGPointMake(width * 0.5, height - 25);
-    self.imageView.center = CGPointMake(width * 0.5, height * 0.5);
-    self.imageView.backgroundColor = [UIColor cyanColor];
+    self.imageView.center = CGPointMake(width * 0.5, height * 0.5 - 15);
+//    [self.imageView sizeToFit];
+    self.imageView.cgl_width = 30;
+    self.imageView.cgl_height = 30;
     
-    [self layoutIfNeeded];
+//    [self layoutIfNeeded];
 }
 
 - (void)setHighlighted:(BOOL)highlighted{}
+
+- (void)setItem:(ZKRFunCategoryItem *)item
+{
+    _item = item;
+    [self setTitle:item.category forState:UIControlStateNormal];
+    [self sd_setImageWithURL:[NSURL URLWithString:item.icon] forState:UIControlStateNormal];
+}
+
+
+
 
 @end

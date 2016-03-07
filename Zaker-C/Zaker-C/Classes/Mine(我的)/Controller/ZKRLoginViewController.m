@@ -8,6 +8,7 @@
 
 #import "ZKRLoginViewController.h"
 #import "ZKRInfiniteScrollView.h"
+#import "ZKRZAKERLoginController.h"
 
 @interface ZKRLoginViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *centerView;
@@ -70,7 +71,9 @@
 }
 - (IBAction)zakerLoginButtonClick:(UIButton *)sender {
 //    self presentViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#> completion:<#^(void)completion#>
+    ZKRZAKERLoginController *zakerVC = [[ZKRZAKERLoginController alloc] init];
     
+    [self presentViewController:zakerVC animated:YES completion:nil];
 }
 
 @end

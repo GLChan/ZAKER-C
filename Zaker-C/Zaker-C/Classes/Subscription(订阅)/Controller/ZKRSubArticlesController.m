@@ -15,7 +15,10 @@
 #import "MJExtension.h"
 #import "ZKRSubArticlesCell2.h"
 #import "ZKRSubArticlesCell3.h"
-
+#import "SVProgressHUD.h"
+/**
+ *  订阅 -> 频道界面
+ */
 @interface ZKRSubArticlesController()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, weak) UICollectionView *collectionView;
@@ -52,7 +55,7 @@ static NSString *SubArticlesCell3 = @"SubArticlesCell3";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [SVProgressHUD show];
     [self loadData];
     
     [self setupCollectionView];
@@ -126,11 +129,11 @@ static NSString *SubArticlesCell3 = @"SubArticlesCell3";
         self.pageArray = pages;
         
         ZKRArticleItem *fir_article = self.itemsArray[0];
-        self.nearTimeLabel.text = fir_article.date;
+        self.nearTimeLabel.text = [fir_article.date setupCreatedAt];
 
         
         ZKRArticleItem *last_article = self.itemsArray[count - 1];
-        self.farTimeLabel.text = last_article.date;
+        self.farTimeLabel.text = [last_article.date setupCreatedAt];
         
         
         self.topImageURL = responseObject[@"data"][@"ipadconfig"][@"pages"][0][@"diy"][@"bgimage_url"];
@@ -138,6 +141,8 @@ static NSString *SubArticlesCell3 = @"SubArticlesCell3";
         
         
         [self.collectionView reloadData];
+        
+        [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
@@ -206,6 +211,7 @@ static NSString *SubArticlesCell3 = @"SubArticlesCell3";
     [self.navigationController popViewControllerAnimated:YES];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
+    [SVProgressHUD dismiss];
 }
 
 

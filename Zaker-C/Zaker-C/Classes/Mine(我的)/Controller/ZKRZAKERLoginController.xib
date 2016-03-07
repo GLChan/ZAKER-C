@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
@@ -18,11 +18,17 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McL-eb-RXk">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaV-6A-NXS">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaV-6A-NXS">
                             <rect key="frame" x="0.0" y="21" width="43" height="43"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="43" id="ZWY-iL-2tE"/>
+                            </constraints>
                             <state key="normal" image="arrow_down"/>
+                            <connections>
+                                <action selector="backClick:" destination="-1" eventType="touchUpInside" id="F2Y-3K-fg2"/>
+                            </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录ZAKER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOO-yi-lBf">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="登录ZAKER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOO-yi-lBf">
                             <rect key="frame" x="144" y="32" width="87.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,21 +45,94 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yU-c9-mdu">
-                    <rect key="frame" x="0.0" y="74" width="375" height="200"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="0.0" y="74" width="375" height="150"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  电子邮箱" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="r7x-3c-Hvu">
+                            <rect key="frame" x="50" y="0.0" width="275" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="pIB-UQ-NCg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="  密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pP1-IO-4SR">
+                            <rect key="frame" x="50" y="50" width="275" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="0Ui-CQ-7Iz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnd-Og-VnE">
+                            <rect key="frame" x="50" y="108" width="132.5" height="34"/>
+                            <state key="normal" title="忘记密码?" backgroundImage="CommentLikeButtonBackgroundNormal">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJD-5Y-uQG">
+                            <rect key="frame" x="192" y="108" width="132.5" height="34"/>
+                            <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="登陆">
+                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="VUd-6K-8LD"/>
+                        <constraint firstItem="gJD-5Y-uQG" firstAttribute="leading" secondItem="Cnd-Og-VnE" secondAttribute="trailing" constant="10" id="50P-GH-xUy"/>
+                        <constraint firstItem="Cnd-Og-VnE" firstAttribute="height" secondItem="gJD-5Y-uQG" secondAttribute="height" id="769-wz-I60"/>
+                        <constraint firstItem="gJD-5Y-uQG" firstAttribute="top" secondItem="pP1-IO-4SR" secondAttribute="bottom" constant="18" id="8a9-Qc-U4w"/>
+                        <constraint firstItem="r7x-3c-Hvu" firstAttribute="leading" secondItem="2yU-c9-mdu" secondAttribute="leading" constant="50" id="Tpw-tS-GAg"/>
+                        <constraint firstAttribute="trailing" secondItem="r7x-3c-Hvu" secondAttribute="trailing" constant="50" id="U2Q-oH-MQN"/>
+                        <constraint firstAttribute="height" constant="150" id="VUd-6K-8LD"/>
+                        <constraint firstItem="gJD-5Y-uQG" firstAttribute="width" secondItem="Cnd-Og-VnE" secondAttribute="width" id="XHD-Ji-Rbv"/>
+                        <constraint firstItem="Cnd-Og-VnE" firstAttribute="leading" secondItem="pP1-IO-4SR" secondAttribute="leading" id="Yhu-Q9-rBl"/>
+                        <constraint firstItem="pP1-IO-4SR" firstAttribute="top" secondItem="r7x-3c-Hvu" secondAttribute="bottom" constant="10" id="Zdd-bf-ZbI"/>
+                        <constraint firstAttribute="trailing" secondItem="pP1-IO-4SR" secondAttribute="trailing" constant="50" id="buF-LW-qAN"/>
+                        <constraint firstItem="r7x-3c-Hvu" firstAttribute="top" secondItem="2yU-c9-mdu" secondAttribute="top" id="dbf-7A-hBN"/>
+                        <constraint firstItem="Cnd-Og-VnE" firstAttribute="top" secondItem="pP1-IO-4SR" secondAttribute="bottom" constant="18" id="jfD-Om-ALP"/>
+                        <constraint firstItem="pP1-IO-4SR" firstAttribute="leading" secondItem="2yU-c9-mdu" secondAttribute="leading" constant="50" id="qku-Om-7bi"/>
+                        <constraint firstItem="gJD-5Y-uQG" firstAttribute="trailing" secondItem="pP1-IO-4SR" secondAttribute="trailing" id="tlP-UI-h0l"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SF9-8W-N9l">
+                    <rect key="frame" x="0.0" y="225" width="375" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="温馨提示: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIw-F9-8o7">
+                            <rect key="frame" x="20" y="10" width="55" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        亲爱的用户, 我们关闭了邮箱注册ZAKER账号的服务, 如果您之前没有使用邮箱注册过ZAKER账号, 请直接使用新浪微博登陆即可, 给您带来不便我们深表歉意." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbq-mH-yX2">
+                            <rect key="frame" x="20" y="24" width="335" height="43"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="EIw-F9-8o7" firstAttribute="top" secondItem="SF9-8W-N9l" secondAttribute="top" constant="10" id="3gA-8b-bBM"/>
+                        <constraint firstAttribute="height" constant="100" id="EK3-1J-CEO"/>
+                        <constraint firstItem="nbq-mH-yX2" firstAttribute="leading" secondItem="SF9-8W-N9l" secondAttribute="leading" constant="20" id="dXH-eB-ZxA"/>
+                        <constraint firstAttribute="trailing" secondItem="nbq-mH-yX2" secondAttribute="trailing" constant="20" id="gh6-Pd-f5s"/>
+                        <constraint firstItem="nbq-mH-yX2" firstAttribute="top" secondItem="EIw-F9-8o7" secondAttribute="bottom" id="uQS-WS-8Fx"/>
+                        <constraint firstItem="EIw-F9-8o7" firstAttribute="leading" secondItem="SF9-8W-N9l" secondAttribute="leading" constant="20" id="v0d-pe-ATj"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.26772629310344825" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="McL-eb-RXk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3cB-U8-iqn"/>
                 <constraint firstItem="2yU-c9-mdu" firstAttribute="top" secondItem="McL-eb-RXk" secondAttribute="bottom" constant="10" id="AeZ-lW-4Nv"/>
                 <constraint firstAttribute="trailing" secondItem="McL-eb-RXk" secondAttribute="trailing" id="E9f-0a-6ZK"/>
                 <constraint firstAttribute="trailing" secondItem="2yU-c9-mdu" secondAttribute="trailing" id="ETJ-qN-CEv"/>
                 <constraint firstItem="2yU-c9-mdu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FVy-iE-gn6"/>
+                <constraint firstItem="SF9-8W-N9l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="N2o-kG-fbz"/>
+                <constraint firstAttribute="trailing" secondItem="SF9-8W-N9l" secondAttribute="trailing" id="jaO-it-5M0"/>
                 <constraint firstItem="McL-eb-RXk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="phE-eo-miV"/>
+                <constraint firstItem="SF9-8W-N9l" firstAttribute="top" secondItem="2yU-c9-mdu" secondAttribute="bottom" constant="1" id="qlW-NV-FnM"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -61,6 +140,7 @@
         </view>
     </objects>
     <resources>
+        <image name="CommentLikeButtonBackgroundNormal" width="5" height="5"/>
         <image name="arrow_down" width="43" height="43"/>
     </resources>
 </document>

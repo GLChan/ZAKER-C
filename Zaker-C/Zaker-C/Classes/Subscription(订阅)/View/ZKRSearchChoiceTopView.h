@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface ZKRSearchChoiceTopView : UIView
+
+//@property (nonatomic, strong) ZKRSearchChoiceTopItem *topItem;
+@property (nonatomic, strong) NSArray *items;
 
 @end

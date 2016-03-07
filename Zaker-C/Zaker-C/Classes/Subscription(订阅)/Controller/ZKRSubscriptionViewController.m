@@ -5,6 +5,9 @@
 //  Created by GuangliChan on 16/1/25.
 //  Copyright © 2016年 GLChen. All rights reserved.
 //
+/**
+ *  订阅主界面
+ */
 NSInteger const cols = 3;
 CGFloat const margin = 1;
 
@@ -46,6 +49,19 @@ CGFloat const margin = 1;
 
  /** 是否编辑模式 */
 @property (nonatomic, assign, getter=isEditing) BOOL editing;
+
+/** 图片 */
+@property (nonatomic, strong) UIImageView *lockScreenView;
+
+@property (nonatomic, strong) UIDynamicAnimator *animator;
+
+@property (nonatomic, strong) UIGravityBehavior *gravityBehaviour;
+
+@property (nonatomic, strong) UIPushBehavior* pushBehavior;
+
+@property (nonatomic, strong) UIAttachmentBehavior *attachmentBehaviour;
+
+@property (nonatomic, strong) UIDynamicItemBehavior *itemBehaviour;
 @end
 
 #pragma mark - ---| static |---
@@ -115,6 +131,7 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
 
 - (void)loadTitlePage
 {
+    
     [self.scroll.mj_header endRefreshing];
 }
 
@@ -222,13 +239,16 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
         // 删除按钮可用
         self.slideView.setupDelButtonEnable = self.collectionView.indexPathsForSelectedItems.count;
         //在路径上则开始移动该路径上的cell
+        
         [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
+        
     } else if (gesture.state == UIGestureRecognizerStateChanged){
 //        NSLog(@"UIGestureRecognizerStateChanged");
         /**
          *  cell 的数组还未调换顺序----- typeArray
          */
         [self.collectionView updateInteractiveMovementTargetPosition:[gesture locationInView:self.collectionView]];
+        
     } else if (gesture.state == UIGestureRecognizerStateEnded) {
 //        NSLog(@"UIGestureRecognizerStateEnded");
         [self.collectionView endInteractiveMovement];
