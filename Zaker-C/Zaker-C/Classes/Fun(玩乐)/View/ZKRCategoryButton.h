@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class ZKRFunCategoryItem;
 @interface ZKRCategoryButton : UIButton
+
+@property (nonatomic, strong) ZKRFunCategoryItem *item;
 
 @end

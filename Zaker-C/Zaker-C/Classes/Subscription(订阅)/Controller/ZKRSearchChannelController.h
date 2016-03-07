@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZKRSearchChannelController : UITabBarController
+@interface ZKRSearchChannelController : UITableViewController
 
 @end

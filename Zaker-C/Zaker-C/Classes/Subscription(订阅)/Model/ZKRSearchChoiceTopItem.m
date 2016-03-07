@@ -7,7 +7,16 @@
 //
 
 #import "ZKRSearchChoiceTopItem.h"
+#import "MJExtension.h"
 
 @implementation ZKRSearchChoiceTopItem
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"api_url":@[@"block_info.api_url",@"block_topic.api_url"],
+             
+             };
+}
 
 @end

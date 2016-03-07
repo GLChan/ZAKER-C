@@ -30,7 +30,7 @@
                                 <constraint firstAttribute="height" constant="1" id="sPo-hh-GEs"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X83-sC-3yR">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X83-sC-3yR">
                             <rect key="frame" x="333" y="1" width="32" height="32"/>
                             <state key="normal" image="common_icon_share"/>
                             <state key="selected" image="common_icon_share"/>

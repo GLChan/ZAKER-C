@@ -11,68 +11,88 @@
 #import "ZKRSearchChoiceTopItem.h"
 #import "MJExtension.h"
 #import "UIButton+WebCache.h"
-
+#import "ZKRSearchChoiceTopView.h"
+#import "ZKRSearchChoiceChannelItem.h"
+#import "ZKRSearchChoiceChannelCell.h"
+#import "SVProgressHUD.h"
+/**
+ *  订阅 -> 搜索 -> 精选
+ */
 @interface ZKRSearchChoiceController ()
 
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 @property (nonatomic, strong) NSArray *itemsArray;
 
-@property (nonatomic, weak) UIView *topView;
+@property (nonatomic, weak) ZKRSearchChoiceTopView *topView;
 
 @property (nonatomic, strong) NSMutableArray *topButtonsArray;
+@property (nonatomic, strong) NSMutableArray *channelsArray;
+
 @end
 
+static NSString *ChoiceChannelCell = @"ChoiceChannelCell";
 @implementation ZKRSearchChoiceController
+#pragma mark - ---| lazy load |---
 
-- (instancetype)initWithStyle:(UITableViewStyle)style
+
+
+- (AFHTTPSessionManager *)manager
 {
-    return [super initWithStyle:UITableViewStyleGrouped];
+    if (!_manager) {
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        _manager = manager;
+    }
+    return _manager;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [SVProgressHUD show];
+    
+    [self setupTopView];
+    [self loadTopData];
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-
-    // topview高度
-    self.tableView.contentInset = UIEdgeInsetsMake(180, 0, 0, 0);
     
-    [self loadTopData];
+     /** 设置头部视图不能写在这= = */
+//    [self loadTopData];
+//    [self setupTopView];
     
-    [self setupTopView];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKRSearchChoiceChannelCell class]) bundle:nil] forCellReuseIdentifier:ChoiceChannelCell];
+    self.tableView.rowHeight = 100;
+    // cell底部分割线去除
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorInset = UIEdgeInsetsZero;
+    // 加载精选频道
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    [self loadChoiceData];
+    
 }
 
+#pragma mark - ---| 加载视图 |---
+ /** 加载顶部视图 */
 - (void)setupTopView
 {
-    UIView *topView = [[UIView alloc] init];
-//    topView.backgroundColor = [UIColor blueColor];
-    topView.frame = CGRectMake(0, -180, self.view.cgl_width, 180);
-    [self.view addSubview:topView];
-    self.topView = topView;
+    self.topView = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass([ZKRSearchChoiceTopView class]) owner:nil options:nil].lastObject;
+    self.topView.frame = CGRectMake(0, 0, 375, 150);
     
-    UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, self.topView.cgl_width - 20, (self.topView.cgl_height - 30) * 0.5)];
-    button1.backgroundColor = [UIColor redColor];
-    button1.titleLabel.text = @"hehe";
-    [self.topView addSubview:button1];
-    [self.topButtonsArray addObject:button1];
+    self.tableView.tableHeaderView =  self.topView;
+//    self.tableView.cgl_y = 200;
     
-    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(10, 10 + CGRectGetMaxY(button1.frame), (self.topView.cgl_width - 30) * 0.5, (self.topView.cgl_height - 30) * 0.5)];
-    button2.backgroundColor = [UIColor orangeColor];
-    [self.topView addSubview:button2];
-    [self.topButtonsArray addObject:button2];
-    
-    UIButton *button3 = [[UIButton alloc] initWithFrame:CGRectMake(10 + CGRectGetMaxX(button2.frame), button2.cgl_y, button2.cgl_width, button2.cgl_height)];
-    button3.backgroundColor = [UIColor blueColor];
-    [self.topView addSubview:button3];
-    [self.topButtonsArray addObject:button3];
 }
 
+#pragma mark - ---| 加载数据 |---
+ /** 顶部数据加载 */
 - (void)loadTopData
 {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
     para[@"_appid"] = @"iphone";
     
-    [manager GET:@"http://iphone.myzaker.com/zaker/find_promotion.php" parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:@"http://iphone.myzaker.com/zaker/find_promotion.php" parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         NSMutableArray *array = [ZKRSearchChoiceTopItem mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"][0]];
         [array addObjectsFromArray:[ZKRSearchChoiceTopItem mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"][1]]];
@@ -85,25 +105,59 @@
             [button sd_setBackgroundImageWithURL:[NSURL URLWithString:item.promotion_img] forState:UIControlStateNormal];
         }
         
+        self.topView.items = self.itemsArray;
+        [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+ /** 加载精选频道数据 */
+- (void)loadChoiceData
+{
+    NSMutableDictionary *para = [NSMutableDictionary dictionary];
+    para[@"_appid"] = @"iphone";
+    para[@"_version"] = @"6.46";
+    
+    [self.manager GET:@"http://iphone.myzaker.com/zaker/find.php" parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.channelsArray = [ZKRSearchChoiceChannelItem mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"]];
+        
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - ---| data source |---
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 20;
 }
-*/
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGLScreenW, 20)];
+    view.backgroundColor = [UIColor colorWithRed:0.93 green:0.93 blue:0.93 alpha:1];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 3, 50, 15)];
+    [view addSubview:label];
+    label.textColor = [UIColor lightGrayColor];
+    label.text = @"精选";
+    return view;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    return 5;
+}
+
+- (ZKRSearchChoiceChannelCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ZKRSearchChoiceChannelCell *cell = [tableView dequeueReusableCellWithIdentifier:ChoiceChannelCell];
+    
+    cell.item = self.channelsArray[indexPath.row];
+    
+    return cell;
+}
 
 @end

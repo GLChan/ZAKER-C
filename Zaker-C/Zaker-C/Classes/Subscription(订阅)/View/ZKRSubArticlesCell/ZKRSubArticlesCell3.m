@@ -82,7 +82,7 @@
         if (article.auther_name) {
             authorLabel = self.authors[i];
             //            authorLabel.text = article.auther_name;
-            authorLabel.text = [NSString stringWithFormat:@"%@  %@", article.auther_name, article.date];
+            authorLabel.text = [NSString stringWithFormat:@"%@  %@", article.auther_name, [article.date setupCreatedAt]];
         }
         if (i == 0) {
             if (article.thumbnail_pic) {
