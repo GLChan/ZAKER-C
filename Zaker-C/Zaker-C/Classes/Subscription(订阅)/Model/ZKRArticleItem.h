@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  新闻文章对象
+ */
 @interface ZKRArticleItem : NSObject
+
 @property (nonatomic, strong) NSString *app_ids;
  /** 发布方名字 */
 @property (nonatomic, strong) NSString *auther_name;

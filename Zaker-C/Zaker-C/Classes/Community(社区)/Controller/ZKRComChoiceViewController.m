@@ -42,6 +42,12 @@ static NSString *ComChoiceCell = @"ComChoiceCell";
     return _manager;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -54,6 +60,7 @@ static NSString *ComChoiceCell = @"ComChoiceCell";
     
     // cell底部分割线去除
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     
     [SVProgressHUD show];
     [self loadData];

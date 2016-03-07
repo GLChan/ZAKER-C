@@ -52,6 +52,8 @@ static NSString *ComChoiceCell = @"ComChoiceCell";
     UIBarButtonItem *nItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
     
     [self.navigationItem setRightBarButtonItem:nItem];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidLoad {

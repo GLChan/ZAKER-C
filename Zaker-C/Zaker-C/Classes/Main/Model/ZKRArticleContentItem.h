@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  文章内容模型
+ */
 @interface ZKRArticleContentItem : NSObject
 
 @property (nonatomic, strong) NSString *content;

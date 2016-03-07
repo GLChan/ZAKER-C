@@ -14,5 +14,5 @@
 
 @property CGFloat cgl_centerX;
 @property CGFloat cgl_centerY;
-
+- (BOOL)cgl_intersectWithView:(UIView *)view;
 @end
