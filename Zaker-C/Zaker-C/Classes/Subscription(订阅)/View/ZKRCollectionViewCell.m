@@ -65,9 +65,21 @@
         self.ttickImageView.image = [image imageWithTintColor:[UIColor redColor]];
     } else {
         self.ttickImageView.image = [image imageWithTintColor:[UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1]];
-//        self.ttickImageView.image = image;
+        //        self.ttickImageView.image = image;
     }
     [super setSelected:selected];
+}
+
+- (void)setEditing:(BOOL)editing
+{
+    UIImage *image = self.tickImageView.image;
+    
+    if (editing) {
+        self.ttickImageView.image = [image imageWithTintColor:[UIColor redColor]];
+    } else {
+        self.ttickImageView.image = [image imageWithTintColor:[UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1]];
+        //        self.ttickImageView.image = image;
+    }
 }
 
 

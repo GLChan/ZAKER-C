@@ -49,11 +49,12 @@ static NSString *ComChoiceCell = @"ComChoiceCell";
 {
     [super viewWillAppear:animated];
     self.view.backgroundColor = CGLCommonBgColor;
-    UIBarButtonItem *nItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
+    UIBarButtonItem *nItem = [[UIBarButtonItem alloc] initWithTitle:@"关注" style:UIBarButtonItemStylePlain target:nil action:nil];
     
     [self.navigationItem setRightBarButtonItem:nItem];
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
 }
 
 - (void)viewDidLoad {
@@ -63,6 +64,8 @@ static NSString *ComChoiceCell = @"ComChoiceCell";
     
     // cell底部分割线去除
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    
     
     [SVProgressHUD show];
 }

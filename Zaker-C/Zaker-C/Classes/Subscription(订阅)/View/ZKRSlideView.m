@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet ZKRSlideViewButton *cancelButton;
 
-@property (weak, nonatomic) IBOutlet ZKRSlideViewButton *delButton;
+//@property (weak, nonatomic) IBOutlet ZKRSlideViewButton *delButton;
 
 
 
@@ -61,23 +61,6 @@
         
     });
     
-}
-
- /** 删除按钮点击 */
-- (IBAction)deleteChannelButton:(UIButton *)sender {
-//    NSLog(@"deleteChannelButton");
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"频道管理" message:@"你已经选择了1频道, 确定要删除吗?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    [alertView show];
-}
-
-
-#pragma mark - ---| alert View delegate |---
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-//    NSLog(@"%zd", buttonIndex);
-    if (buttonIndex == 1) {
-        NSLog(@"确定删除");
-    }
 }
 
 @end

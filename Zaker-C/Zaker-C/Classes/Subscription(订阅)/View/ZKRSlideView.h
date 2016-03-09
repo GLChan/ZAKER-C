@@ -13,4 +13,7 @@
  /** del button enable */
 @property (nonatomic, assign) BOOL setupDelButtonEnable;
 
+@property (weak, nonatomic) IBOutlet ZKRSlideViewButton *delButton;
+
+
 @end

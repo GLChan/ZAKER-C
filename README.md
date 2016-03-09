@@ -1,5 +1,6 @@
 # ZAKER-C
 #### 仿ZAKER的iOS客户端
+- 项目会现在rekaz(https://github.com/GLChan/rekaz )先作小更新, ZAKER-C用来做大更新(不要问我为什么,呵呵)
 
 - ![](http://ww4.sinaimg.cn/large/6f23d9bagw1f1jzpxt8hhj20v90j5tdv.jpg)
 - ![](http://ww2.sinaimg.cn/large/6f23d9bagw1f1jznm0zsqj20v90j5wlc.jpg)
@@ -8,6 +9,9 @@
 项目要点后面总结~~~~~~
 
 ## 更新日志
+- 03.08
+	1. 新增`新闻详情界面`点击网页图片进入`图片浏览器`(还有点击之后的动画效果未完成, 睡觉 02:18)
+		- ![](http://ww3.sinaimg.cn/large/6f23d9bagw1f1oup0o6m5g207r0e94qp.gif)
 - 03.07
 	1. 新增评论(还有许多小问题未解决,睡觉 02:30)
 		- <img src="http://ww3.sinaimg.cn/large/6f23d9bagw1f1npg3kmvij20pi16y440.jpg" width="25%" height="25%">

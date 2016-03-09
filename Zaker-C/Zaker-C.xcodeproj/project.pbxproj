@@ -113,6 +113,12 @@
 		EE98F1A41C8A6E25001D9E78 /* ZKRSearchChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE98F1A21C8A6E25001D9E78 /* ZKRSearchChannelCell.xib */; };
 		EE98F1A71C8A70FD001D9E78 /* ZKRChannelGroupItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98F1A61C8A70FD001D9E78 /* ZKRChannelGroupItem.m */; };
 		EE98F1AA1C8A7109001D9E78 /* ZKRChannelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EE98F1A91C8A7109001D9E78 /* ZKRChannelItem.m */; };
+		EEA111631C8DEAD00026B90C /* ZKRAtricleShowMediaController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA111611C8DEAD00026B90C /* ZKRAtricleShowMediaController.m */; };
+		EEA111641C8DEAD00026B90C /* ZKRAtricleShowMediaController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA111621C8DEAD00026B90C /* ZKRAtricleShowMediaController.xib */; };
+		EEA1116D1C8DF5750026B90C /* ZKRArticleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEA1116B1C8DF5750026B90C /* ZKRArticleViewCell.m */; };
+		EEA1116E1C8DF5750026B90C /* ZKRArticleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEA1116C1C8DF5750026B90C /* ZKRArticleViewCell.xib */; };
+		EEAA054B1C8D4E5E008F9331 /* ZKRFileCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAA054A1C8D4E5E008F9331 /* ZKRFileCacheManager.m */; };
+		EEAA054E1C8D5AE2008F9331 /* CNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEAA054D1C8D5AE2008F9331 /* CNotificationManager.m */; };
 		EEB687F61C7FE9A3008CE2DC /* ZKRComDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB687F51C7FE9A3008CE2DC /* ZKRComDiscoverViewController.m */; };
 		EEB687FC1C7FEAE1008CE2DC /* ZKRComChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB687FB1C7FEAE1008CE2DC /* ZKRComChoiceViewController.m */; };
 		EEB687FF1C7FF5FF008CE2DC /* ZKRComDiscoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB687FE1C7FF5FF008CE2DC /* ZKRComDiscoverCell.m */; };
@@ -323,6 +329,16 @@
 		EE98F1A61C8A70FD001D9E78 /* ZKRChannelGroupItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRChannelGroupItem.m; sourceTree = "<group>"; };
 		EE98F1A81C8A7109001D9E78 /* ZKRChannelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRChannelItem.h; sourceTree = "<group>"; };
 		EE98F1A91C8A7109001D9E78 /* ZKRChannelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRChannelItem.m; sourceTree = "<group>"; };
+		EEA111601C8DEAD00026B90C /* ZKRAtricleShowMediaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRAtricleShowMediaController.h; sourceTree = "<group>"; };
+		EEA111611C8DEAD00026B90C /* ZKRAtricleShowMediaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRAtricleShowMediaController.m; sourceTree = "<group>"; };
+		EEA111621C8DEAD00026B90C /* ZKRAtricleShowMediaController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKRAtricleShowMediaController.xib; sourceTree = "<group>"; };
+		EEA1116A1C8DF5750026B90C /* ZKRArticleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRArticleViewCell.h; sourceTree = "<group>"; };
+		EEA1116B1C8DF5750026B90C /* ZKRArticleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRArticleViewCell.m; sourceTree = "<group>"; };
+		EEA1116C1C8DF5750026B90C /* ZKRArticleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKRArticleViewCell.xib; sourceTree = "<group>"; };
+		EEAA05491C8D4E5E008F9331 /* ZKRFileCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRFileCacheManager.h; sourceTree = "<group>"; };
+		EEAA054A1C8D4E5E008F9331 /* ZKRFileCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRFileCacheManager.m; sourceTree = "<group>"; };
+		EEAA054C1C8D5AE2008F9331 /* CNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNotificationManager.h; sourceTree = "<group>"; };
+		EEAA054D1C8D5AE2008F9331 /* CNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNotificationManager.m; sourceTree = "<group>"; };
 		EEB687F41C7FE9A3008CE2DC /* ZKRComDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRComDiscoverViewController.h; sourceTree = "<group>"; };
 		EEB687F51C7FE9A3008CE2DC /* ZKRComDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRComDiscoverViewController.m; sourceTree = "<group>"; };
 		EEB687FA1C7FEAE1008CE2DC /* ZKRComChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRComChoiceViewController.h; sourceTree = "<group>"; };
@@ -691,6 +707,9 @@
 				EE9455061C85E28C00FF1FD1 /* ZKRArticleViewController.xib */,
 				EE9455091C85F31B00FF1FD1 /* ZKRArticleDetailController.h */,
 				EE94550A1C85F31B00FF1FD1 /* ZKRArticleDetailController.m */,
+				EEA111601C8DEAD00026B90C /* ZKRAtricleShowMediaController.h */,
+				EEA111611C8DEAD00026B90C /* ZKRAtricleShowMediaController.m */,
+				EEA111621C8DEAD00026B90C /* ZKRAtricleShowMediaController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -723,6 +742,9 @@
 				EE5902351C8C9737005BCEB2 /* ZKRArticleCommentCell.h */,
 				EE5902361C8C9737005BCEB2 /* ZKRArticleCommentCell.m */,
 				EE5902381C8C9760005BCEB2 /* ZKRArticleCommentCell.xib */,
+				EEA1116A1C8DF5750026B90C /* ZKRArticleViewCell.h */,
+				EEA1116B1C8DF5750026B90C /* ZKRArticleViewCell.m */,
+				EEA1116C1C8DF5750026B90C /* ZKRArticleViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -826,6 +848,10 @@
 				EEDF82E81C5C631100FF5AA8 /* HFStretchableTableHeaderView.m */,
 				EECEF94C1C849F020039B2F4 /* ZKRHTTPSessionManager.h */,
 				EECEF94D1C849F020039B2F4 /* ZKRHTTPSessionManager.m */,
+				EEAA05491C8D4E5E008F9331 /* ZKRFileCacheManager.h */,
+				EEAA054A1C8D4E5E008F9331 /* ZKRFileCacheManager.m */,
+				EEAA054C1C8D5AE2008F9331 /* CNotificationManager.h */,
+				EEAA054D1C8D5AE2008F9331 /* CNotificationManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1001,6 +1027,7 @@
 				EE5EBC441C7FDBC900777B5E /* ZKRComInterestViewController.xib in Resources */,
 				EE9455081C85E28C00FF1FD1 /* ZKRArticleViewController.xib in Resources */,
 				EE5593591C78D57800985094 /* ZKRHotTableViewCell.xib in Resources */,
+				EEA1116E1C8DF5750026B90C /* ZKRArticleViewCell.xib in Resources */,
 				EE5E7A111C619FE800F30275 /* placeholder.png in Resources */,
 				EE5E7A0E1C619FE800F30275 /* HeadLineCurrentPageIndicator@2x.png in Resources */,
 				EE6646B71C5B964F0064CDA6 /* ZKRMineTableController.storyboard in Resources */,
@@ -1015,6 +1042,7 @@
 				EEF090931C837A01005B522C /* ZKRChoiceThreePicView.xib in Resources */,
 				EE968F541C80A2A800C6D1E0 /* ZKRFunCategoryController.xib in Resources */,
 				EE968F4F1C80459100C6D1E0 /* ZKRZAKERLoginController.xib in Resources */,
+				EEA111641C8DEAD00026B90C /* ZKRAtricleShowMediaController.xib in Resources */,
 				EE968F711C812BDB00C6D1E0 /* ZKRSearchChoiceTopView.xib in Resources */,
 				EE88D39F1C552E47001300F8 /* Assets.xcassets in Resources */,
 				EE968F3E1C80325B00C6D1E0 /* ZKRLoginViewController.xib in Resources */,
@@ -1114,6 +1142,7 @@
 				EE6185741C85B73E004A4088 /* ZKRSubArticlesCell3.m in Sources */,
 				EE98F18F1C898DD9001D9E78 /* ZKRCityItem.m in Sources */,
 				EE5EBC431C7FDBC900777B5E /* ZKRComInterestViewController.m in Sources */,
+				EEA111631C8DEAD00026B90C /* ZKRAtricleShowMediaController.m in Sources */,
 				EEE975E31C8AD19C00CD667D /* NSDate+Interval.m in Sources */,
 				EE7F72861C7751B0007EFCBE /* ZKRFunCellItem.m in Sources */,
 				EE3D80731C8C31C4008B41AE /* ZKRRefreshFooter.m in Sources */,
@@ -1125,11 +1154,13 @@
 				EE968F391C80282600C6D1E0 /* ZKRCommentCellItem.m in Sources */,
 				EE83A1241C8B3537008D24EC /* UIViewController+ZKRTop.m in Sources */,
 				EE9455071C85E28C00FF1FD1 /* ZKRArticleViewController.m in Sources */,
+				EEA1116D1C8DF5750026B90C /* ZKRArticleViewCell.m in Sources */,
 				EE2A87A11C84888D008BB94D /* ZKRSubArticlesController.m in Sources */,
 				EE98F1881C8976E8001D9E78 /* ZKRFunCategoryItem.m in Sources */,
 				EE88D3DF1C566C95001300F8 /* UIColor+Hex.m in Sources */,
 				EE968F641C80B7AC00C6D1E0 /* ZKRSearchChannelController.m in Sources */,
 				EE7E8DC61C58F60D004E71DA /* ZKRRootTypeItem.m in Sources */,
+				EEAA054B1C8D4E5E008F9331 /* ZKRFileCacheManager.m in Sources */,
 				EE98F1A31C8A6E25001D9E78 /* ZKRSearchChannelCell.m in Sources */,
 				EE88D3E61C566D77001300F8 /* ZKRNavigationController.m in Sources */,
 				EE3D80741C8C31C4008B41AE /* ZKRRefreshHeader.m in Sources */,
@@ -1161,6 +1192,7 @@
 				EE968F571C80A67700C6D1E0 /* ZKRCategoryButton.m in Sources */,
 				EEE7F27E1C757359000222AD /* ZKRAccountBarButtonItem.m in Sources */,
 				EEE975E01C8AD0EC00CD667D /* NSCalendar+Init.m in Sources */,
+				EEAA054E1C8D5AE2008F9331 /* CNotificationManager.m in Sources */,
 				EE9455761C868F9400FF1FD1 /* ZKRArticleContentItem.m in Sources */,
 				EEDF82E91C5C631100FF5AA8 /* HFStretchableTableHeaderView.m in Sources */,
 				EE88D3E11C566C95001300F8 /* UITextField+CGLplaceholderLabel.m in Sources */,
