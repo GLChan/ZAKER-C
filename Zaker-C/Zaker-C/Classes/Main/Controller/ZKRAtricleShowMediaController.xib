@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZKRAtricleShowMediaController">
+            <connections>
+                <outlet property="mainView" destination="kKd-9h-13Y" id="SMD-hx-7GA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YB-lb-cte">
+                    <rect key="frame" x="0.0" y="632" width="375" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSe-DC-VK8">
+                            <rect key="frame" x="0.0" y="0.0" width="94" height="35"/>
+                            <state key="normal" image="common_icon_return"/>
+                            <connections>
+                                <action selector="backButtonClick:" destination="-1" eventType="touchUpInside" id="Thc-zj-cg3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOe-ab-aJh">
+                            <rect key="frame" x="94" y="0.0" width="93.5" height="35"/>
+                            <state key="normal" image="common_icon_thumbs_up"/>
+                            <state key="selected" image="common_icon_thumbs_up_orange"/>
+                            <connections>
+                                <action selector="greatButtonClick:" destination="-1" eventType="touchUpInside" id="GZN-Za-pfi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOU-CZ-boq">
+                            <rect key="frame" x="187" y="0.0" width="94" height="35"/>
+                            <state key="normal" image="common_icon_share"/>
+                            <connections>
+                                <action selector="shareButtonClick:" destination="-1" eventType="touchUpInside" id="q7p-aU-FvB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srg-XN-ykn">
+                            <rect key="frame" x="281" y="0.0" width="93.5" height="35"/>
+                            <state key="normal" image="common_icon_download"/>
+                            <connections>
+                                <action selector="downloadButtonClick:" destination="-1" eventType="touchUpInside" id="N8s-TP-II5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="NOe-ab-aJh" firstAttribute="leading" secondItem="CSe-DC-VK8" secondAttribute="trailing" id="0kn-75-koh"/>
+                        <constraint firstAttribute="height" constant="35" id="4JN-tF-kLh"/>
+                        <constraint firstItem="KOU-CZ-boq" firstAttribute="centerY" secondItem="5YB-lb-cte" secondAttribute="centerY" id="79t-43-UgB"/>
+                        <constraint firstItem="Srg-XN-ykn" firstAttribute="top" secondItem="5YB-lb-cte" secondAttribute="top" id="8we-yP-OaZ"/>
+                        <constraint firstItem="KOU-CZ-boq" firstAttribute="width" secondItem="CSe-DC-VK8" secondAttribute="width" id="AyT-w7-W36"/>
+                        <constraint firstAttribute="bottom" secondItem="KOU-CZ-boq" secondAttribute="bottom" id="BW4-Zv-Gug"/>
+                        <constraint firstItem="Srg-XN-ykn" firstAttribute="centerY" secondItem="5YB-lb-cte" secondAttribute="centerY" id="GTj-Q0-Tjp"/>
+                        <constraint firstItem="Srg-XN-ykn" firstAttribute="leading" secondItem="KOU-CZ-boq" secondAttribute="trailing" id="JHI-rb-3KG"/>
+                        <constraint firstItem="NOe-ab-aJh" firstAttribute="top" secondItem="5YB-lb-cte" secondAttribute="top" id="LIn-Nt-QcB"/>
+                        <constraint firstItem="KOU-CZ-boq" firstAttribute="top" secondItem="5YB-lb-cte" secondAttribute="top" id="M45-da-CBq"/>
+                        <constraint firstAttribute="trailing" secondItem="Srg-XN-ykn" secondAttribute="trailing" id="MQQ-57-GNl"/>
+                        <constraint firstItem="Srg-XN-ykn" firstAttribute="width" secondItem="CSe-DC-VK8" secondAttribute="width" id="MrN-yV-wqm"/>
+                        <constraint firstItem="NOe-ab-aJh" firstAttribute="centerY" secondItem="5YB-lb-cte" secondAttribute="centerY" id="e92-om-Wzm"/>
+                        <constraint firstAttribute="bottom" secondItem="NOe-ab-aJh" secondAttribute="bottom" id="gy0-gm-ou6"/>
+                        <constraint firstItem="KOU-CZ-boq" firstAttribute="leading" secondItem="NOe-ab-aJh" secondAttribute="trailing" id="lPP-7l-Qya"/>
+                        <constraint firstItem="NOe-ab-aJh" firstAttribute="width" secondItem="CSe-DC-VK8" secondAttribute="width" id="msl-SX-iCS"/>
+                        <constraint firstAttribute="bottom" secondItem="CSe-DC-VK8" secondAttribute="bottom" id="o7v-8p-wAk"/>
+                        <constraint firstItem="CSe-DC-VK8" firstAttribute="leading" secondItem="5YB-lb-cte" secondAttribute="leading" id="oMo-5q-DEo"/>
+                        <constraint firstItem="CSe-DC-VK8" firstAttribute="top" secondItem="5YB-lb-cte" secondAttribute="top" id="obD-pt-YyX"/>
+                        <constraint firstItem="CSe-DC-VK8" firstAttribute="centerY" secondItem="5YB-lb-cte" secondAttribute="centerY" id="rHz-w2-PaJ"/>
+                        <constraint firstAttribute="bottom" secondItem="Srg-XN-ykn" secondAttribute="bottom" id="sZR-bZ-A85"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kKd-9h-13Y">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="632"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5YB-lb-cte" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Mn-9W-0bO"/>
+                <constraint firstAttribute="trailing" secondItem="kKd-9h-13Y" secondAttribute="trailing" id="FiE-U6-gI2"/>
+                <constraint firstAttribute="bottom" secondItem="5YB-lb-cte" secondAttribute="bottom" id="OUo-3U-cZm"/>
+                <constraint firstItem="kKd-9h-13Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ehY-t6-HJp"/>
+                <constraint firstAttribute="trailing" secondItem="5YB-lb-cte" secondAttribute="trailing" id="gJb-2h-DM1"/>
+                <constraint firstItem="kKd-9h-13Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ioX-6h-gjt"/>
+                <constraint firstItem="5YB-lb-cte" firstAttribute="top" secondItem="kKd-9h-13Y" secondAttribute="bottom" id="l5c-fG-lgq"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common_icon_download" width="32" height="32"/>
+        <image name="common_icon_return" width="32" height="32"/>
+        <image name="common_icon_share" width="32" height="32"/>
+        <image name="common_icon_thumbs_up" width="32" height="32"/>
+        <image name="common_icon_thumbs_up_orange" width="32" height="32"/>
+    </resources>
+</document>

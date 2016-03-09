@@ -29,9 +29,10 @@ CGFloat const margin = 1;
 #import "ZKRSubSearchController.h"
 #import "ZKRTitlePageRefreshHeader.h"
 #import "ZKRSubArticlesController.h"
+#import "ZKRSlideViewButton.h"
 
 
-@interface ZKRSubscriptionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
+@interface ZKRSubscriptionViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UIAlertViewDelegate>
 
  /** 整个界面的一个scrollView */
 @property (nonatomic, weak) UIScrollView *scroll;
@@ -50,18 +51,6 @@ CGFloat const margin = 1;
  /** 是否编辑模式 */
 @property (nonatomic, assign, getter=isEditing) BOOL editing;
 
-/** 图片 */
-@property (nonatomic, strong) UIImageView *lockScreenView;
-
-@property (nonatomic, strong) UIDynamicAnimator *animator;
-
-@property (nonatomic, strong) UIGravityBehavior *gravityBehaviour;
-
-@property (nonatomic, strong) UIPushBehavior* pushBehavior;
-
-@property (nonatomic, strong) UIAttachmentBehavior *attachmentBehaviour;
-
-@property (nonatomic, strong) UIDynamicItemBehavior *itemBehaviour;
 @end
 
 #pragma mark - ---| static |---
@@ -238,15 +227,14 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
         
         // 删除按钮可用
         self.slideView.setupDelButtonEnable = self.collectionView.indexPathsForSelectedItems.count;
+        [self.slideView.delButton addTarget:self action:@selector(delButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        
         //在路径上则开始移动该路径上的cell
         
         [self.collectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
         
     } else if (gesture.state == UIGestureRecognizerStateChanged){
 //        NSLog(@"UIGestureRecognizerStateChanged");
-        /**
-         *  cell 的数组还未调换顺序----- typeArray
-         */
         [self.collectionView updateInteractiveMovementTargetPosition:[gesture locationInView:self.collectionView]];
         
     } else if (gesture.state == UIGestureRecognizerStateEnded) {
@@ -271,6 +259,7 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
 }
 
 #pragma mark - ---| collection delegate |---
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ZKRCollectionViewCell *cell = (ZKRCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
@@ -286,10 +275,16 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
             [self searchClick];
         }
 
-    } else {
-        return;
+    } else { // 编辑状态下
+//        if (cell.isEditing) {
+//            cell.editing = NO;
+//        } else {
+//            cell.editing = YES;
+//        }
     }
 }
+
+
 
 // $$$$$ 02.08
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -310,6 +305,7 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     //将数据插入到资源数组中的目标位置上
     [self.typeArray insertObject:objc atIndex:destinationIndexPath.item];
 }
+
 
 #pragma mark - ---| scroll delegate |---
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -333,9 +329,27 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
 /** 监听右上角搜索按钮点击 */
 - (void)searchClick
 {
-    //    CGLFunc
     ZKRSubSearchController *vc = [[ZKRSubSearchController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (void)delButtonClick
+{
+//    NSLog(@"hehe");
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"频道管理" message:@"你已经选择了1频道, 确定要删除吗?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    [alertView show];
+}
+
+#pragma mark - ---| alertView delegate |---
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+//    [self.cellsArray enumerateObjectsUsingBlock:^(ZKRCollectionViewCell *cell , NSUInteger idx, BOOL * _Nonnull stop) {
+//        if (cell.isEditing) {
+//            NSLog(@"%zd", idx);
+//        }
+//    }];
+
+}
+
 
 @end

@@ -9,6 +9,7 @@
 #import "ZKRArticleViewController.h"
 #import "ZKRArticleDetailController.h"
 #import "ZKRArticleItem.h"
+#import "SVProgressHUD.h"
 
 
 @interface ZKRArticleViewController ()
@@ -29,16 +30,18 @@
 }
 
 
-
 #pragma mark - ---| event |---
  /** 返回上一级 */
 - (IBAction)backButtonClick:(UIButton *)sender {
     
     [self.navigationController popViewControllerAnimated:YES];
+    
     // 如果上一层是主控制器那就显示navigationBar
     if ([self.preVC isEqualToString:@"ZKRColoumnsViewController"]) {
         [self.navigationController setNavigationBarHidden:NO animated:YES];
     }
+    
+    [SVProgressHUD dismiss];
 }
 
  /** 分享 */

@@ -27,9 +27,6 @@
                     <state key="normal" title="删除频道" image="SubscriptionDeleteBlock-0-Day">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <connections>
-                        <action selector="deleteChannelButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="2PO-2R-KVV"/>
-                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.99607843139999996" green="0.2666666667" blue="0.2784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,7 +45,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="cancelButton" destination="WG9-nc-ZKg" id="UNY-X3-kep"/>
-                <outlet property="delButton" destination="Dz9-jm-DlI" id="qKd-VS-ep9"/>
+                <outlet property="delButton" destination="Dz9-jm-DlI" id="q1F-Jj-jz7"/>
             </connections>
         </view>
     </objects>
