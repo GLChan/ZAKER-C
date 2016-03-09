@@ -18,4 +18,6 @@
 
 @property (nonatomic, weak) UIImageView *ttickImageView;
 
+@property (nonatomic, assign, getter=isEditing) BOOL editing;
+
 @end
