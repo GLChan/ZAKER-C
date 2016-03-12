@@ -17,12 +17,11 @@
 
 @property (weak, nonatomic) IBOutlet ZKRCategoryButton *firCateButton;
 @property (weak, nonatomic) IBOutlet ZKRCategoryButton *secCateButton;
-
 @property (weak, nonatomic) IBOutlet ZKRCategoryButton *thrCateButton;
 @property (weak, nonatomic) IBOutlet ZKRCategoryButton *fourCateButton;
 @property (weak, nonatomic) IBOutlet ZKRCategoryButton *fifCateButton;
-
 @property (weak, nonatomic) IBOutlet ZKRCategoryButton *sixCateButton;
+
 @property (weak, nonatomic) IBOutlet UIButton *locationButton;
 
 @property (nonatomic, strong) NSMutableArray *buttons;
