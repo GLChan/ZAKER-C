@@ -19,14 +19,14 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YB-lb-cte">
                     <rect key="frame" x="0.0" y="632" width="375" height="35"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSe-DC-VK8">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSe-DC-VK8">
                             <rect key="frame" x="0.0" y="0.0" width="94" height="35"/>
                             <state key="normal" image="common_icon_return"/>
                             <connections>
                                 <action selector="backButtonClick:" destination="-1" eventType="touchUpInside" id="Thc-zj-cg3"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOe-ab-aJh">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOe-ab-aJh">
                             <rect key="frame" x="94" y="0.0" width="93.5" height="35"/>
                             <state key="normal" image="common_icon_thumbs_up"/>
                             <state key="selected" image="common_icon_thumbs_up_orange"/>
@@ -34,14 +34,14 @@
                                 <action selector="greatButtonClick:" destination="-1" eventType="touchUpInside" id="GZN-Za-pfi"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOU-CZ-boq">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOU-CZ-boq">
                             <rect key="frame" x="187" y="0.0" width="94" height="35"/>
                             <state key="normal" image="common_icon_share"/>
                             <connections>
                                 <action selector="shareButtonClick:" destination="-1" eventType="touchUpInside" id="q7p-aU-FvB"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srg-XN-ykn">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srg-XN-ykn">
                             <rect key="frame" x="281" y="0.0" width="93.5" height="35"/>
                             <state key="normal" image="common_icon_download"/>
                             <connections>

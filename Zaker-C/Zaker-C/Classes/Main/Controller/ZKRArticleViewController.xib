@@ -30,35 +30,35 @@
                                 <constraint firstAttribute="height" constant="1" id="Wdd-Ph-1GU"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15m-Xd-7tE">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15m-Xd-7tE">
                             <rect key="frame" x="0.0" y="1" width="75" height="32"/>
                             <state key="normal" image="common_icon_return"/>
                             <connections>
                                 <action selector="backButtonClick:" destination="-1" eventType="touchUpInside" id="1HX-Fs-Fk6"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42K-2M-b8T">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42K-2M-b8T">
                             <rect key="frame" x="75" y="1" width="74.5" height="32"/>
                             <state key="normal" image="common_icon_share"/>
                             <connections>
                                 <action selector="shareButtonClick:" destination="-1" eventType="touchUpInside" id="vXs-s4-6m1"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh9-B8-Q7M">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh9-B8-Q7M">
                             <rect key="frame" x="225" y="1" width="75" height="32"/>
                             <state key="normal" image="common_icon_pencil_square"/>
                             <connections>
                                 <action selector="answerButtonClick:" destination="-1" eventType="touchUpInside" id="HlX-I5-bsQ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-Du-UXo">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-Du-UXo">
                             <rect key="frame" x="300" y="1" width="75" height="32"/>
                             <state key="normal" image="common_icon_setting"/>
                             <connections>
                                 <action selector="moreSettingButtonClick:" destination="-1" eventType="touchUpInside" id="lis-kV-8XV"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oai-Sr-2Zx">
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oai-Sr-2Zx">
                             <rect key="frame" x="150" y="1" width="75" height="32"/>
                             <state key="normal" image="common_icon_comment_s"/>
                             <connections>
