@@ -103,7 +103,6 @@ static NSString *ComChoiceCell = @"ComChoiceCell";
         self.next_url = responseObject[@"data"][@"info"][@"next_url"];
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
-        
         [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -163,11 +162,4 @@ static NSString *ComChoiceCell = @"ComChoiceCell";
     detailVC.item = self.itemsArray[indexPath.row];
     [self.navigationController pushViewController:detailVC animated:YES];
 }
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [SVProgressHUD dismiss];
-    [super viewWillDisappear:animated];
-}
-
 @end

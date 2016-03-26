@@ -11,10 +11,6 @@
 #import "ZKRCityItem.h"
 #import "MJExtension.h"
 
-/**
- *  玩乐 - 分类 - 定位
- */
-
 @interface ZKRFunLocationController ()
 
 

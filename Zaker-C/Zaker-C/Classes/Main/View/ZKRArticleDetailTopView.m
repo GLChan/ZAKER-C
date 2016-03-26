@@ -26,5 +26,4 @@
     self.authorLabel.text = item.auther_name;
     self.backgroundColor = [UIColor colorWithHexString:item.block_color];
 }
-
 @end

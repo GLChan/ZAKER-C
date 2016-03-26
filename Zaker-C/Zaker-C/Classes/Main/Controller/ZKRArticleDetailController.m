@@ -253,8 +253,7 @@ static NSString *ArticleCommentCell = @"ArticleCommentCell";
 
     [webView.scrollView addSubview:view];
 
-    // 100 + 150(广告高度变高= =)
-    webView.cgl_height = webViewHeight + TitleViewHeight + StatusBarHeight + 250;
+    webView.cgl_height = webViewHeight + TitleViewHeight + StatusBarHeight + 100;
     
     self.tableView.tableHeaderView = webView;
     

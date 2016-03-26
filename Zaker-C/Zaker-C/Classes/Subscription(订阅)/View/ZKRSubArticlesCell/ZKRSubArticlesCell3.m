@@ -106,10 +106,6 @@
     }
     
 }
-
-/**
- *  点击view跳转到文章详情页
- */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch =  [touches anyObject];
@@ -127,9 +123,8 @@
         }
         
     }];
-    
+    //    NSLog(@"%@", article.title);
 }
-
 - (void)setItem:(ZKRRootTypeItem *)item
 {
     _item = item;
