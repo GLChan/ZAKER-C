@@ -36,12 +36,14 @@
     
     [self.navigationController popViewControllerAnimated:YES];
     
+    [SVProgressHUD dismiss];
+    
     // 如果上一层是主控制器那就显示navigationBar
     if ([self.preVC isEqualToString:@"ZKRColoumnsViewController"]) {
         [self.navigationController setNavigationBarHidden:NO animated:YES];
+        
     }
     
-    [SVProgressHUD dismiss];
 }
 
  /** 分享 */

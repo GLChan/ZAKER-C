@@ -12,6 +12,7 @@
  /** 文章字典(链接) */
 @property (nonatomic, strong) NSDictionary *article;
 @property (nonatomic, strong) NSString *click_stat_url;
+
  /** pic */ 
 @property (nonatomic, strong) NSDictionary *pic;
 @property (nonatomic, strong) NSString *pk;

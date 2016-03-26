@@ -40,10 +40,10 @@
     [self setupTopView];
 
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGLScreenW, CGLScreenH - 35 - 64)];
-    self.tableView = tableView;
+    self.tableView                = tableView;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    tableView.delegate = self;
-    tableView.dataSource = self;
+    tableView.delegate            = self;
+    tableView.dataSource          = self;
     
 //    [self.mainView addSubview:tableView];
     
@@ -62,11 +62,11 @@
     self.webView = webView;
     [self.mainView addSubview:webView];
     // 用来监听web加载进度
-    NJKWebViewProgress *progressProxy = [[NJKWebViewProgress alloc] init];
-    self.progressProxy = progressProxy;
+    NJKWebViewProgress *progressProxy       = [[NJKWebViewProgress alloc] init];
+    self.progressProxy                      = progressProxy;
     self.progressProxy.webViewProxyDelegate = self;
-    self.progressProxy.progressDelegate = self;
-    self.webView.delegate = self.progressProxy;
+    self.progressProxy.progressDelegate     = self;
+    self.webView.delegate                   = self.progressProxy;
     
 //    [self.webView reload];
 }

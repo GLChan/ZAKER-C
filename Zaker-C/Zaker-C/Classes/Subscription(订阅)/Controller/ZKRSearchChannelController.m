@@ -47,7 +47,7 @@ static NSString *ChannelsGroupCell = @"ChannelsGroupCell";
     self.manager = [AFHTTPSessionManager manager];
     
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
-    para[@"_appid"] = @"iphone";
+    para[@"_appid"]   = @"iphone";
     para[@"_version"] = @"6.46";
     
     [self.manager GET:@"http://iphone.myzaker.com/zaker/apps_v3.php" parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -55,8 +55,8 @@ static NSString *ChannelsGroupCell = @"ChannelsGroupCell";
         // 遍历数组 转换成频道item
         [self.groups enumerateObjectsUsingBlock:^(ZKRChannelGroupItem *obj, NSUInteger idx, BOOL * _Nonnull stop) {
             
-            self.channels = [ZKRChannelItem mj_objectArrayWithKeyValuesArray:obj.sons];
-            obj.sons = self.channels;
+            self.channels    = [ZKRChannelItem mj_objectArrayWithKeyValuesArray:obj.sons];
+            obj.sons         = self.channels;
             self.groups[idx] = obj;
         }];
         [self.tableView reloadData];

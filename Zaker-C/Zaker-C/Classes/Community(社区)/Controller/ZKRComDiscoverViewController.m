@@ -61,9 +61,9 @@ static NSString *ID = @"DiscoverCell";
 - (void)loadData
 {
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
-    para[@"_appid"] = @"iphone";
-    para[@"_udid"] = @"48E21014-9B62-48C3-B818-02F902C1619E";
-    para[@"_net"] = @"wifi";
+    para[@"_appid"]   = @"iphone";
+    para[@"_udid"]    = @"48E21014-9B62-48C3-B818-02F902C1619E";
+    para[@"_net"]     = @"wifi";
     para[@"_version"] = @"6.46";
     //    para[@"act"] = @"more_discussion";
     

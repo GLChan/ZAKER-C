@@ -94,18 +94,18 @@ static NSString *ChoiceChannelCell = @"ChoiceChannelCell";
     
     [self.manager GET:@"http://iphone.myzaker.com/zaker/find_promotion.php" parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSMutableArray *array = [ZKRSearchChoiceTopItem mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"][0]];
-        [array addObjectsFromArray:[ZKRSearchChoiceTopItem mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"][1]]];
-        
-        self.itemsArray = array;
-        
-        for (int i = 0; i < self.itemsArray.count; ++i) {
-            ZKRSearchChoiceTopItem *item = self.itemsArray[i];
-            UIButton *button = self.topButtonsArray[i];
-            [button sd_setBackgroundImageWithURL:[NSURL URLWithString:item.promotion_img] forState:UIControlStateNormal];
-        }
-        
-        self.topView.items = self.itemsArray;
+//        NSMutableArray *array = [ZKRSearchChoiceTopItem mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"][0]];
+//        [array addObjectsFromArray:[ZKRSearchChoiceTopItem mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"list"][1]]];
+//        
+//        self.itemsArray = array;
+//        
+//        for (int i = 0; i < self.itemsArray.count; ++i) {
+//            ZKRSearchChoiceTopItem *item = self.itemsArray[i];
+//            UIButton *button = self.topButtonsArray[i];
+//            [button sd_setBackgroundImageWithURL:[NSURL URLWithString:item.promotion_img] forState:UIControlStateNormal];
+//        }
+//        
+//        self.topView.items = self.itemsArray;
         [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);

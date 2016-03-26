@@ -80,10 +80,10 @@ static NSString *ComChoiceCell = @"ComChoiceCell";
 - (void)loadData
 {
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
-    para[@"_appid"] = @"iphone";
-    para[@"_udid"] = @"48E21014-9B62-48C3-B818-02F902C1619E";
-    para[@"_net"] = @"wifi";
-    para[@"_version"] = @"6.46";
+    para[@"_appid"]    = @"iphone";
+    para[@"_udid"]     = @"48E21014-9B62-48C3-B818-02F902C1619E";
+    para[@"_net"]      = @"wifi";
+    para[@"_version"]  = @"6.46";
     para[@"_lbs_city"] = @"%E5%B9%BF%E5%B7%9E";
     
     [self.manager GET:@"http://dis.myzaker.com/api/get_post_selected.php" parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -109,10 +109,10 @@ static NSString *ComChoiceCell = @"ComChoiceCell";
     
 //    [self.tableView.mj_header endRefreshing];
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
-    para[@"_appid"] = @"iphone";
-    para[@"_udid"] = @"48E21014-9B62-48C3-B818-02F902C1619E";
-    para[@"_net"] = @"wifi";
-    para[@"_version"] = @"6.46";
+    para[@"_appid"]    = @"iphone";
+    para[@"_udid"]     = @"48E21014-9B62-48C3-B818-02F902C1619E";
+    para[@"_net"]      = @"wifi";
+    para[@"_version"]  = @"6.46";
     para[@"_lbs_city"] = @"%E5%B9%BF%E5%B7%9E";
     
     [self.manager GET:@"http://dis.myzaker.com/api/get_post_selected.php" parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

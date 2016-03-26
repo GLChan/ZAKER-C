@@ -31,19 +31,19 @@ static NSString *ArticleViewCell = @"ArticleViewCell";
     //创建流水布局
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     
-    flowLayout.itemSize = CGSizeMake(self.mainView.cgl_width, self.mainView.cgl_height);
-    flowLayout.minimumLineSpacing = 0;
+    flowLayout.itemSize                = CGSizeMake(self.mainView.cgl_width, self.mainView.cgl_height);
+    flowLayout.minimumLineSpacing      = 0;
     flowLayout.minimumInteritemSpacing = 0;
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    flowLayout.scrollDirection         = UICollectionViewScrollDirectionHorizontal;
     
     //创建collectionView
     UICollectionView *mediasView = [[UICollectionView alloc] initWithFrame:self.mainView.bounds collectionViewLayout:flowLayout];
     
-    mediasView.dataSource = self;
-    mediasView.delegate = self;
-    mediasView.pagingEnabled = YES;
+    mediasView.dataSource                     = self;
+    mediasView.delegate                       = self;
+    mediasView.pagingEnabled                  = YES;
     mediasView.showsHorizontalScrollIndicator = NO;
-    mediasView.bounces = NO;
+    mediasView.bounces                        = NO;
     
     mediasView.contentOffset = CGPointMake(self.mainView.cgl_width * self.currentIndex, 0);
     // 注册cell
@@ -86,7 +86,6 @@ static NSString *ArticleViewCell = @"ArticleViewCell";
 }
 - (IBAction)greatButtonClick:(UIButton *)sender {
     if (sender.selected) {
-        
         sender.selected = NO;
     } else {
         sender.selected = YES;

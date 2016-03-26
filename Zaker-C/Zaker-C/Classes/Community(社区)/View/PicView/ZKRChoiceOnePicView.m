@@ -53,10 +53,10 @@
     
     if (self.item.isBigPicture) {
         [self.picImageView setContentScaleFactor:[[UIScreen mainScreen] scale]];
-        self.picImageView.contentMode = UIViewContentModeScaleAspectFill;
+        self.picImageView.contentMode   = UIViewContentModeScaleAspectFill;
         self.picImageView.clipsToBounds = YES;
     } else {
-        self.picImageView.contentMode = UIViewContentModeScaleToFill;
+        self.picImageView.contentMode   = UIViewContentModeScaleToFill;
         self.picImageView.clipsToBounds = NO;
     }
 }

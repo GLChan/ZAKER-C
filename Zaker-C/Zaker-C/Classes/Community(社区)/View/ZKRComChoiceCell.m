@@ -73,9 +73,9 @@
     [super layoutSubviews];
     
     if ([self.item.item_type intValue] == CGLItemTypeOne) {
-        self.onePicView.frame = self.item.centerFrame;
+        self.onePicView.frame    = self.item.centerFrame;
     } else if ([self.item.item_type intValue] == CGLItemTypeTwo) {
-        self.twoPicsView.frame = self.item.centerFrame;
+        self.twoPicsView.frame   = self.item.centerFrame;
     } else if ([self.item.item_type intValue] == CGLItemTypeThree) {
         self.threePicsView.frame = self.item.centerFrame;
     }

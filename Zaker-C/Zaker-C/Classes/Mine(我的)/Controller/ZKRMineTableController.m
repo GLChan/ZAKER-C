@@ -180,13 +180,13 @@
     NSString *cacheStr = @"已清除";
     if (totalSize > (1000 * 1000)) { //MB
         cacheSizeF = totalSize / (1000 * 1000);
-        cacheStr = [NSString stringWithFormat:@"当前缓存 %.1fM",cacheSizeF];
-        cacheStr = [cacheStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
+        cacheStr   = [NSString stringWithFormat:@"当前缓存 %.1fM",cacheSizeF];
+        cacheStr   = [cacheStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
     } else if (totalSize > 1000) { //KB
         cacheSizeF = totalSize / 1000;
-        cacheStr = [NSString stringWithFormat:@"当前缓存 %.1fK",cacheSizeF];
+        cacheStr   = [NSString stringWithFormat:@"当前缓存 %.1fK",cacheSizeF];
     } else if (totalSize > 0){ // B
-        cacheStr = [NSString stringWithFormat:@"当前缓存 %ldB",totalSize];
+        cacheStr   = [NSString stringWithFormat:@"当前缓存 %ldB",totalSize];
     }
     
     return cacheStr;

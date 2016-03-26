@@ -8,18 +8,18 @@
 #import "ZKRAccountBarButtonItem.h"
 #import "ZKRFunViewController.h"
 #import "ZKRBarButtonItem.h"
+#import "ZKRFunGroupItem.h"
+#import "ZKRFunCellItem.h"
+#import "ZKRFunCategoryController.h"
+#import "ZKRColoumnsViewController.h"
 
 #import "UIBarButtonItem+CGLExtension.h"
 
 #import "AFHTTPSessionManager.h"
-#import "ZKRFunGroupItem.h"
-#import "ZKRFunCellItem.h"
 #import "MJExtension.h"
 #import "UIImageView+WebCache.h"
-
-#import "ZKRColoumnsViewController.h"
-#import "ZKRFunCategoryController.h"
 #import "SVProgressHUD.h"
+
 
 @interface ZKRFunViewController ()
 
@@ -52,6 +52,7 @@
         _groupsArray = [NSMutableArray array];
     }
     return _groupsArray;
+    
 }
 
 - (ZKRColoumnsViewController *)tableVC
@@ -71,7 +72,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNav];
+    
     [SVProgressHUD show];
+    
     [self loadData];
 }
 
@@ -114,10 +117,10 @@
     // 参数
     
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
-    para[@"_appid"] = @"iphone";
+    para[@"_appid"]   = @"iphone";
     para[@"_version"] = @"6.46";
-    para[@"c"] = @"columns";
-    
+    para[@"c"]        = @"columns";
+
     [self.manager GET:@"http://wl.myzaker.com/" parameters:para progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -138,8 +141,9 @@
             newCellArray = [NSMutableArray array];
             
         }
-        //        ZKRFunGroupItem *group = self.groupsArray[0];
-        //        NSLog(@"%@", group.itemsArray);
+//        ZKRFunGroupItem *group = self.groupsArray[0];
+//        ZKRFunCellItem *cell = group.items[1];
+//        NSLog(@"%@", [cell getAllPropertiesAndVaules]);
         
         // 轮播图
         self.cycleURLString = responseObject[@"data"][@"promote"][0][@"promotion_img"];

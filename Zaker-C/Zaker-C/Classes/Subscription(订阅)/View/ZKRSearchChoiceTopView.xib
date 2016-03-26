@@ -12,32 +12,35 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="API-jr-jzy">
-                    <rect key="frame" x="10" y="10" width="355" height="85"/>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tj-x1-F0e">
-                    <rect key="frame" x="10" y="105" width="172.5" height="85"/>
+                    <rect key="frame" x="5" y="102.5" width="180" height="92.5"/>
+                    <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rou-yb-6cM">
-                    <rect key="frame" x="192" y="105" width="172.5" height="85"/>
+                    <rect key="frame" x="190" y="102.5" width="180" height="92.5"/>
+                    <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="API-jr-jzy">
+                    <rect key="frame" x="5" y="5" width="365" height="92.5"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="rou-yb-6cM" secondAttribute="trailing" constant="10" id="3zd-fH-YSr"/>
+                <constraint firstAttribute="trailing" secondItem="rou-yb-6cM" secondAttribute="trailing" constant="5" id="3zd-fH-YSr"/>
                 <constraint firstItem="API-jr-jzy" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.45" id="Ix2-qc-0eA"/>
                 <constraint firstItem="API-jr-jzy" firstAttribute="height" secondItem="1Tj-x1-F0e" secondAttribute="height" id="MwE-JD-sJm"/>
-                <constraint firstItem="1Tj-x1-F0e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="PQW-8P-y2X"/>
-                <constraint firstItem="API-jr-jzy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="S0j-We-Eve"/>
+                <constraint firstItem="1Tj-x1-F0e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="PQW-8P-y2X"/>
+                <constraint firstItem="API-jr-jzy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="S0j-We-Eve"/>
                 <constraint firstAttribute="bottom" secondItem="API-jr-jzy" secondAttribute="bottom" constant="10" id="X2q-Av-q5E"/>
-                <constraint firstItem="rou-yb-6cM" firstAttribute="top" secondItem="API-jr-jzy" secondAttribute="bottom" constant="10" id="XbB-DI-Yvv"/>
-                <constraint firstAttribute="bottom" secondItem="1Tj-x1-F0e" secondAttribute="bottom" constant="10" id="akZ-wQ-QNJ"/>
-                <constraint firstItem="rou-yb-6cM" firstAttribute="leading" secondItem="1Tj-x1-F0e" secondAttribute="trailing" constant="10" id="bHt-3f-CUF"/>
-                <constraint firstItem="1Tj-x1-F0e" firstAttribute="top" secondItem="API-jr-jzy" secondAttribute="bottom" constant="10" id="bUW-Vo-qGm"/>
-                <constraint firstItem="API-jr-jzy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="jsa-51-glM"/>
+                <constraint firstItem="rou-yb-6cM" firstAttribute="top" secondItem="API-jr-jzy" secondAttribute="bottom" constant="5" id="XbB-DI-Yvv"/>
+                <constraint firstAttribute="bottom" secondItem="1Tj-x1-F0e" secondAttribute="bottom" constant="5" id="akZ-wQ-QNJ"/>
+                <constraint firstItem="rou-yb-6cM" firstAttribute="leading" secondItem="1Tj-x1-F0e" secondAttribute="trailing" constant="5" id="bHt-3f-CUF"/>
+                <constraint firstItem="1Tj-x1-F0e" firstAttribute="top" secondItem="API-jr-jzy" secondAttribute="bottom" constant="5" id="bUW-Vo-qGm"/>
+                <constraint firstItem="API-jr-jzy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="jsa-51-glM"/>
                 <constraint firstItem="1Tj-x1-F0e" firstAttribute="width" secondItem="rou-yb-6cM" secondAttribute="width" id="mMr-wK-Wgl"/>
-                <constraint firstAttribute="trailing" secondItem="API-jr-jzy" secondAttribute="trailing" constant="10" id="n29-3o-aRE"/>
-                <constraint firstAttribute="bottom" secondItem="rou-yb-6cM" secondAttribute="bottom" constant="10" id="ths-91-fwN"/>
+                <constraint firstAttribute="trailing" secondItem="API-jr-jzy" secondAttribute="trailing" constant="5" id="n29-3o-aRE"/>
+                <constraint firstAttribute="bottom" secondItem="rou-yb-6cM" secondAttribute="bottom" constant="5" id="ths-91-fwN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">

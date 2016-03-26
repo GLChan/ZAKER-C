@@ -13,6 +13,9 @@
 #import "MJExtension.h"
 #import "ZKRFunLocationController.h"
 
+/**
+ *  玩乐 - 分类
+ */
 @interface ZKRFunCategoryController ()
 
 @property (weak, nonatomic) IBOutlet ZKRCategoryButton *firCateButton;

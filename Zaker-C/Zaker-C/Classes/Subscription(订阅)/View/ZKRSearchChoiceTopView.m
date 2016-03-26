@@ -24,16 +24,16 @@
 
 - (void)setItems:(NSArray *)items
 {
-    _items = items;
-    
-    [items enumerateObjectsUsingBlock:^(ZKRSearchChoiceTopItem  *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIButton *btn = self.buttons[idx];
-        [btn sd_setBackgroundImageWithURL:[NSURL URLWithString:obj.promotion_img] forState:UIControlStateNormal];
+    if (items) {
+        _items = items;
         
-        self.buttons[idx] = btn;
-    }];
-    
-    
+        [items enumerateObjectsUsingBlock:^(ZKRSearchChoiceTopItem  *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            UIButton *btn = self.buttons[idx];
+            [btn sd_setBackgroundImageWithURL:[NSURL URLWithString:obj.promotion_img] forState:UIControlStateNormal];
+            
+            self.buttons[idx] = btn;
+        }];
+    } 
 }
 
 - (NSMutableArray *)buttons

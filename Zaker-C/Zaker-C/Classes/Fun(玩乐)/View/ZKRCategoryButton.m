@@ -20,9 +20,9 @@
     CGFloat height = self.cgl_height;
     
     self.titleLabel.center = CGPointMake(width * 0.5, height - 25);
-    self.imageView.center = CGPointMake(width * 0.5, height * 0.5 - 15);
-//    [self.imageView sizeToFit];
-    self.imageView.cgl_width = 30;
+    
+    self.imageView.center     = CGPointMake(width * 0.5, height * 0.5 - 15);
+    self.imageView.cgl_width  = 30;
     self.imageView.cgl_height = 30;
     
 //    [self layoutIfNeeded];

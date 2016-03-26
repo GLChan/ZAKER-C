@@ -69,8 +69,8 @@
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"\"ZAKER\"想要打开\"QQ\"" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"打开", nil];
     [alertView show];
 }
+
 - (IBAction)zakerLoginButtonClick:(UIButton *)sender {
-//    self presentViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#> completion:<#^(void)completion#>
     ZKRZAKERLoginController *zakerVC = [[ZKRZAKERLoginController alloc] init];
     
     [self presentViewController:zakerVC animated:YES completion:nil];

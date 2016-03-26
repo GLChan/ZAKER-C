@@ -47,15 +47,13 @@ CGFloat const margin = 1;
  /** collectionView 所有cell */
 @property (nonatomic, strong) NSArray *cellsArray;
 
-
  /** 是否编辑模式 */
 @property (nonatomic, assign, getter=isEditing) BOOL editing;
 
 @end
 
-#pragma mark - ---| static |---
-static NSString *ID = @"cell";
 
+static NSString *ID = @"cell";
 static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.php?";
 
 @implementation ZKRSubscriptionViewController
@@ -90,15 +88,15 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     [self setupNav];
     
      // 初始化主界面的scrollView
-    UIScrollView *mainScrollView = [[UIScrollView alloc] init];
+    UIScrollView *mainScrollView   = [[UIScrollView alloc] init];
     mainScrollView.backgroundColor = CGLCommonBgColor;
-    mainScrollView.frame = self.view.bounds;
-    
-    self.scroll = mainScrollView;
+    mainScrollView.frame           = self.view.bounds;
+
+    self.scroll                    = mainScrollView;
     [self.view addSubview:self.scroll];
-    
-    self.scroll.delegate = self;
-    self.scroll.contentInset = UIEdgeInsetsMake(0, 0, 64, 0);
+
+    self.scroll.delegate           = self;
+    self.scroll.contentInset       = UIEdgeInsetsMake(0, 0, 64, 0);
     
     //初始化轮播
     [self setupRotateArticles];
@@ -147,17 +145,17 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
 {
     //创建流水布局
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(cellWH, cellWH);
-    flowLayout.minimumLineSpacing = margin;
+    flowLayout.itemSize                = CGSizeMake(cellWH, cellWH);
+    flowLayout.minimumLineSpacing      = margin;
     flowLayout.minimumInteritemSpacing = margin;
     
     //创建collectionView
     UICollectionView *contentTypeView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 200, CGLScreenW, CGLScreenW - 64 - 200) collectionViewLayout:flowLayout];
 
     contentTypeView.backgroundColor = CGLCommonBgColor;
-    contentTypeView.scrollEnabled = NO;
-    contentTypeView.dataSource = self;
-    contentTypeView.delegate = self;
+    contentTypeView.scrollEnabled   = NO;
+    contentTypeView.dataSource      = self;
+    contentTypeView.delegate        = self;
     
     
     // 注册cell
@@ -167,11 +165,11 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     self.collectionView = contentTypeView;
     
     //计算整个页面的内容高度
-    NSInteger count = _typeArray.count;
-    NSInteger rows = (count - 1) / cols + 1;
-    CGFloat collectionH = rows * cellWH;
+    NSInteger count                = _typeArray.count;
+    NSInteger rows                 = (count - 1) / cols + 1;
+    CGFloat collectionH            = rows * cellWH;
     self.collectionView.cgl_height = collectionH;
-    self.scroll.contentSize = CGSizeMake(0, collectionH + self.collectionView.cgl_y);
+    self.scroll.contentSize        = CGSizeMake(0, collectionH + self.collectionView.cgl_y);
     
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(collectionViewLongPress:)];
     longPress.minimumPressDuration = 0.5;
@@ -189,10 +187,10 @@ static NSString *requestURL = @"http://iphone.myzaker.com/zaker/follow_promote.p
     
     // 添加最后一个cell - 专门用来添加类型的cell
     ZKRRootTypeItem *item = [[ZKRRootTypeItem alloc] init];
-    item.title = @"添加内容";
-    item.pic = @"addRootBlock_cell_add";
-    item.need_userinfo = @"NO";
-    item.block_color = @"#d3d7d4";
+    item.title            = @"添加内容";
+    item.pic              = @"addRootBlock_cell_add";
+    item.need_userinfo    = @"NO";
+    item.block_color      = @"#d3d7d4";
     
     [_typeArray addObject:item];
 }

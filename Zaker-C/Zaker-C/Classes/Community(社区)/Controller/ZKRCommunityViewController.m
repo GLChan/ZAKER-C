@@ -114,10 +114,10 @@
     titleScrollView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.98];
     self.titleScrollView            = titleScrollView;
     
-    UIView *titleBottomView = [[UIView alloc] init];
-    titleBottomView.frame = CGRectMake(0, titleScrollView.cgl_height - 0.5, self.view.cgl_width, 1);
+    UIView *titleBottomView         = [[UIView alloc] init];
+    titleBottomView.frame           = CGRectMake(0, titleScrollView.cgl_height - 0.5, self.view.cgl_width, 1);
     titleBottomView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
-    self.titleBottomView = titleBottomView;
+    self.titleBottomView            = titleBottomView;
     
     [self.view addSubview:titleBottomView];
     [self.view addSubview:titleScrollView];

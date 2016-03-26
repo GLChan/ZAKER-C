@@ -7,7 +7,9 @@
 //
 
 #import "ZKRFunCellItem.h"
+#import "ZKRArticleItem.h"
 
 @implementation ZKRFunCellItem
+
 
 @end
